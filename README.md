@@ -14,7 +14,7 @@
 
 I spend most of my time at the edge of AI coding agents: building the skills,
 tools and infrastructure that make them genuinely useful day to day. A lot of
-that is plumbing you never see, so here is some of it in the open.
+that is plumbing you never see, so here is the shape of it.
 
 - **Agent tooling** MCP servers, Claude Code skills, and harnesses that let
   agents do real work rather than just chat
@@ -23,11 +23,8 @@ that is plumbing you never see, so here is some of it in the open.
 - **Education at Preface** helping people and companies keep pace with the
   technology, not just read about it
 
-### A few things I work on
-
-- Claude Code skills for design and visual thinking: [`visualize`](https://github.com/oliver-mee/visualize) and [`claude-design-skill`](https://github.com/oliver-mee/claude-design-skill)
-- Open agent projects I contribute to: [`openclaw`](https://github.com/oliver-mee/openclaw), [`hermes-agent`](https://github.com/oliver-mee/hermes-agent), [`paperclip`](https://github.com/oliver-mee/paperclip)
-- A typed, LLM-maintained personal knowledge base
+Most of what I build is private or still in progress. More will land here in
+the open over time.
 
 ### Elsewhere
 
