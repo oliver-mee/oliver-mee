@@ -29,5 +29,5 @@ the open over time.
 ### Elsewhere
 
 - Preface: [preface.ai](https://preface.ai)
-- LinkedIn: _add your link_
+- LinkedIn: [olivermee](https://www.linkedin.com/in/olivermee/)
 - Site: _coming soon_
