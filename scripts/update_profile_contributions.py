@@ -2,8 +2,11 @@
 
 import argparse
 import json
+import os
 import re
-import subprocess
+import urllib.error
+import urllib.parse
+import urllib.request
 from collections import defaultdict
 from pathlib import Path
 
@@ -13,11 +16,69 @@ END = "<!-- contributions:end -->"
 CONFIG = Path(".github/profile-contributions.json")
 PR_RE = re.compile(r"^https://github\.com/([^/]+/[^/]+)/pull/\d+$")
 LINE_RE = re.compile(r"^- \*\*\[(.+?)\]\(https://github\.com/([^/]+/[^/]+)\)\*\* — .+\.$")
+API_VERSION = "2026-03-10"
 
 
-def gh_json(args):
-    proc = subprocess.run(["gh", *args], check=True, text=True, capture_output=True)
-    return json.loads(proc.stdout)
+def github_search_prs(state, limit=200):
+    """Search Oliver's public external PRs without relying on repo-scoped GITHUB_TOKEN.
+
+    GitHub's Actions GITHUB_TOKEN is scoped to this profile repository, so it is
+    deliberately not used for the cross-repository search. Public Search API
+    requests work without authentication. PROFILE_GITHUB_TOKEN is optional and
+    can be added later to raise rate limits; it only needs public-read access.
+    """
+    query = f"author:{OWNER} is:pr is:{state} -user:{OWNER}"
+    token = os.getenv("PROFILE_GITHUB_TOKEN", "").strip()
+    items = []
+    page = 1
+
+    while len(items) < limit:
+        params = urllib.parse.urlencode({
+            "q": query,
+            "sort": "created",
+            "order": "desc",
+            "per_page": min(100, limit - len(items)),
+            "page": page,
+        })
+        request = urllib.request.Request(
+            f"https://api.github.com/search/issues?{params}",
+            headers={
+                "Accept": "application/vnd.github+json",
+                "X-GitHub-Api-Version": API_VERSION,
+                "User-Agent": f"{OWNER}-profile-contributions",
+            },
+        )
+        if token:
+            request.add_header("Authorization", f"Bearer {token}")
+
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                payload = json.load(response)
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")[:500]
+            hint = (
+                " Add a read-only fine-grained PAT as PROFILE_GITHUB_TOKEN if "
+                "the unauthenticated public Search API is rate-limited."
+            )
+            raise SystemExit(f"GitHub public PR search failed ({exc.code}): {detail}.{hint}") from exc
+
+        batch = payload.get("items", [])
+        items.extend(batch)
+        if len(batch) < min(100, limit - (len(items) - len(batch))):
+            break
+        page += 1
+
+    return [
+        {
+            "title": item["title"],
+            "number": item["number"],
+            "url": item["html_url"],
+            "body": item.get("body") or "",
+            "createdAt": item.get("created_at"),
+            "updatedAt": item.get("updated_at"),
+        }
+        for item in items[:limit]
+    ]
 
 
 def load_config():
@@ -44,12 +105,7 @@ def collect():
     # merge, it disappears on the next run unless there is explicit adoption
     # evidence in the config below.
     for state, bucket in (("merged", "merged_prs"), ("open", "open_prs")):
-        prs = gh_json([
-            "search", "prs", f"author:{OWNER}", f"is:{state}",
-            "--limit", "200",
-            "--json", "title,number,url,body,createdAt,updatedAt",
-        ])
-        for pr in prs:
+        for pr in github_search_prs(state):
             url = pr["url"]
             if url in excluded:
                 continue
