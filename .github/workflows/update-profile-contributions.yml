@@ -1,0 +1,92 @@
+name: Update profile contributions
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 16:17 Hong Kong / Singapore time. The odd minute reduces scheduler contention.
+    - cron: "17 8 * * *"
+
+permissions:
+  contents: write
+  copilot-requests: write
+
+concurrency:
+  group: profile-contributions
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v6
+
+      - name: Collect verified contribution evidence
+        id: evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/update_profile_contributions.py collect > /tmp/contribution-evidence.json
+
+          python - <<'PY' > /tmp/contribution-evidence.sha256
+          import hashlib
+          import json
+          from pathlib import Path
+
+          evidence = json.loads(Path("/tmp/contribution-evidence.json").read_text())
+          # The refresh trigger is intentionally based on accepted evidence IDs,
+          # not prose, so routine API ordering changes do not spend AI credits.
+          accepted = []
+          for repo in evidence["repos"]:
+              accepted.extend(pr["url"] for pr in repo["merged_prs"])
+              accepted.extend(item["evidence_url"] for item in repo["adopted"])
+          payload = "\n".join(sorted(accepted)).encode()
+          print(hashlib.sha256(payload).hexdigest())
+          PY
+
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif [[ -f .github/profile-contributions-state.sha256 ]] && cmp -s /tmp/contribution-evidence.sha256 .github/profile-contributions-state.sha256; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Node.js
+        if: steps.evidence.outputs.changed == 'true'
+        uses: actions/setup-node@v7
+
+      - name: Install GitHub Copilot CLI
+        if: steps.evidence.outputs.changed == 'true'
+        run: npm install -g @github/copilot
+
+      - name: Generate compact contribution ledger
+        if: steps.evidence.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/update_profile_contributions.py prompt /tmp/contribution-evidence.json > /tmp/contribution-prompt.txt
+          copilot -p "$(cat /tmp/contribution-prompt.txt)" -s --no-ask-user > /tmp/contributions.md
+
+      - name: Validate and update README
+        if: steps.evidence.outputs.changed == 'true'
+        run: |
+          python scripts/update_profile_contributions.py apply \
+            /tmp/contribution-evidence.json \
+            /tmp/contributions.md \
+            README.md
+          cp /tmp/contribution-evidence.sha256 .github/profile-contributions-state.sha256
+
+      - name: Commit changed profile
+        if: steps.evidence.outputs.changed == 'true'
+        run: |
+          if git diff --quiet -- README.md .github/profile-contributions-state.sha256; then
+            echo "No profile changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md .github/profile-contributions-state.sha256
+          git commit -m "chore: refresh open-source contributions"
+          git push
