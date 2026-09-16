@@ -24,7 +24,9 @@ jobs:
       - name: Collect verified contribution evidence
         id: evidence
         env:
-          GH_TOKEN: ${{ github.token }}
+          # Optional. Public Search API works without it; a fine-grained token
+          # named PROFILE_GITHUB_TOKEN can be added later for higher rate limits.
+          PROFILE_GITHUB_TOKEN: ${{ secrets.PROFILE_GITHUB_TOKEN }}
         run: |
           python scripts/update_profile_contributions.py collect > /tmp/contribution-evidence.json
 
