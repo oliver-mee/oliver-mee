@@ -1,0 +1,12 @@
+{
+  "display_names": {
+    "anomalyco/models.dev": "models.dev",
+    "openclaw/openclaw": "OpenClaw",
+    "vectorize-io/hindsight": "Hindsight",
+    "openclaw/notcrawl": "notcrawl",
+    "RealZST/HarnessKit": "HarnessKit",
+    "awkoy/notion-mcp-server": "Notion MCP Server"
+  },
+  "exclude_pr_urls": [],
+  "adopted": []
+}
