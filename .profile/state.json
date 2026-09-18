@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "last_full_audit": "2026-09-18",
+  "last_audited_through": "2026-09-18T13:56:00+08:00",
+  "known_contribution_repos": [
+    "anomalyco/models.dev",
+    "openclaw/openclaw",
+    "NousResearch/hermes-agent",
+    "basicmachines-co/basic-memory",
+    "manaflow-ai/cmux",
+    "stablyai/orca",
+    "vectorize-io/hindsight",
+    "lidge-jun/opencodex",
+    "larksuite/cli",
+    "plastic-labs/honcho",
+    "gsd-build/get-shit-done",
+    "openclaw/notcrawl",
+    "RealZST/HarnessKit",
+    "awkoy/notion-mcp-server",
+    "alexei-led/ccgram",
+    "Digital-Process-Tools/claude-remember",
+    "rohitg00/agentmemory",
+    "nanocoai/nanoclaw",
+    "danielpetho/fancy",
+    "Subhan-code/Amicro--Micro-transitions-"
+  ],
+  "special_cases": [
+    {
+      "repo": "stablyai/orca",
+      "source": "https://github.com/stablyai/orca/pull/14451",
+      "evidence": "https://github.com/stablyai/orca/pull/14619",
+      "note": "Closed original PR; merged replacement explicitly builds on Oliver's report/work and credits him."
+    },
+    {
+      "repo": "alexei-led/ccgram",
+      "source": "https://github.com/alexei-led/ccgram/issues/130",
+      "evidence": "https://github.com/alexei-led/ccgram/pull/131#issuecomment-5202100025",
+      "note": "Maintainer explicitly confirmed Oliver's diagnosis; fix landed through a different lower-level reconciliation path."
+    },
+    {
+      "repo": "basicmachines-co/basic-memory",
+      "sources": [
+        "https://github.com/basicmachines-co/basic-memory/issues/1334",
+        "https://github.com/basicmachines-co/basic-memory/issues/1336",
+        "https://github.com/basicmachines-co/basic-memory/pull/1580"
+      ],
+      "evidence": [
+        "https://github.com/basicmachines-co/basic-memory/pull/1354",
+        "https://github.com/basicmachines-co/basic-memory/pull/1370"
+      ],
+      "note": "Issue-led fixes for CLI project reconciliation and custom OpenAI embedding endpoints; PR #1580 is a current direct Codex MCP fix."
+    },
+    {
+      "repo": "manaflow-ai/cmux",
+      "source": "https://github.com/manaflow-ai/cmux/issues/9706",
+      "evidence": "https://github.com/manaflow-ai/cmux/pull/9760",
+      "note": "Oliver diagnosed and later reproduced the relay-lease/live-PTY failure; merged upstream PR closes that issue."
+    },
+    {
+      "repo": "plastic-labs/honcho",
+      "source": "https://github.com/plastic-labs/honcho/issues/687",
+      "evidence": "https://github.com/plastic-labs/honcho/pull/983",
+      "note": "Embedding batch-size diagnosis for OpenAI-compatible providers led to merged configurable batch sizing."
+    },
+    {
+      "repo": "Digital-Process-Tools/claude-remember",
+      "source": "https://github.com/Digital-Process-Tools/claude-remember/issues/136",
+      "evidence": "https://github.com/Digital-Process-Tools/claude-remember/pull/160",
+      "note": "Malformed-summary validation report was included in the merged save-pipeline fix."
+    },
+    {
+      "repo": "rohitg00/agentmemory",
+      "source": "https://github.com/rohitg00/agentmemory/issues/752",
+      "evidence": "https://github.com/rohitg00/agentmemory/pull/774",
+      "note": "Version/PATH and aarch64 install diagnosis led to merged private pinned-engine installation."
+    },
+    {
+      "repo": "nanocoai/nanoclaw",
+      "source": "https://github.com/nanocoai/nanoclaw/issues/2191",
+      "evidence": "https://github.com/nanocoai/nanoclaw/pull/2309",
+      "note": "Missing sqlite3 CLI dependency report led to merged better-sqlite3 wrapper migration."
+    },
+    {
+      "repo": "gsd-build/get-shit-done",
+      "sources": [
+        "https://github.com/gsd-build/get-shit-done/issues/2505",
+        "https://github.com/gsd-build/get-shit-done/issues/2009",
+        "https://github.com/gsd-build/get-shit-done/issues/1571",
+        "https://github.com/gsd-build/get-shit-done/issues/1885"
+      ],
+      "evidence": [
+        "https://github.com/gsd-build/get-shit-done/pull/2511",
+        "https://github.com/gsd-build/get-shit-done/pull/2027",
+        "https://github.com/gsd-build/get-shit-done/pull/1599",
+        "https://github.com/gsd-build/get-shit-done/pull/2074"
+      ],
+      "note": "Multiple diagnosed issues resulted in merged upstream fixes."
+    }
+  ]
+}
