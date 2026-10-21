@@ -132,7 +132,7 @@ class CoverageTests(unittest.TestCase):
             (root / '.profile').mkdir()
             original = 'Intro\n\n### Open-source contributions\n\nOld content\n'
             (root / 'README.md').write_text(original)
-            (root / '.profile/profile.json').write_text(json.dumps({'sections': [{'title': 'Open-source contributions', 'items': [{'name': 'Example', 'repo': 'example/repo', 'parts': [{'text': 'Bad target', 'url': 'https://example.invalid/'}]}]}]}))
+            (root / '.profile/profile.json').write_text(json.dumps({'sections': [{'title': 'Open-source contributions', 'items': [{'name': 'Example', 'repo': 'example/repo', 'stars': 0, 'parts': [{'text': 'Bad target', 'url': 'https://example.invalid/'}]}]}]}))
             with patch.object(audit, 'ROOT', root):
                 with self.assertRaises(ValueError):
                     audit.render_profile()
@@ -147,6 +147,54 @@ class CoverageTests(unittest.TestCase):
         with patch.object(audit, 'gh', return_value={'items': [], 'total_count': 0}) as api:
             audit.search('author:oliver-mee', 'commits')
             self.assertTrue(api.call_args.args[0].startswith('search/commits?'))
+
+
+    def test_contribution_sections_are_sorted_by_stars_with_clickable_badges(self):
+        source = json.loads((self.root / '.profile/profile.json').read_text())
+        for section in source['sections']:
+            text = self.readme.split(f"### {section['title']}\n", 1)[1].split('\n### ', 1)[0]
+            actual = re.findall(r'^- \*\*\[([^\]]+)\]', text, re.M)
+            expected = sorted(section['items'], key=lambda item: (-item['stars'], item['name'].casefold(), item['repo'].casefold()))
+            self.assertEqual(actual, [item['name'] for item in expected])
+            for item in expected:
+                self.assertIn(f"[![Stars](https://img.shields.io/github/stars/{item['repo']}?style=social)](https://github.com/{item['repo']}/stargazers)", text)
+        self.assertNotIn('preface.ai', self.readme)
+        self.assertNotIn('Hong Kong', self.readme)
+
+    def test_star_sort_has_alphabetical_ties_and_rejects_invalid_counts(self):
+        items = [{'name': name, 'repo': f'example/{name}', 'stars': stars} for name, stars in [('Z', 4), ('b', 8), ('A', 8)]]
+        self.assertEqual([item['name'] for item in sorted(items, key=audit.contribution_sort_key)], ['A', 'b', 'Z'])
+        for invalid in (None, -1, True, '12'):
+            with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                audit.contribution_sort_key({'repo': 'example/repo', 'stars': invalid})
+
+    def test_refresh_stars_preserves_claims_and_rejects_nonpublic_or_bad_metadata(self):
+        import tempfile
+        import os
+        with tempfile.TemporaryDirectory(dir=os.environ.get('TMPDIR')) as scratch:
+            root = Path(scratch)
+            (root / '.profile').mkdir()
+            path = root / '.profile/profile.json'
+            source = {'sections': [{'title': 'Open-source contributions', 'items': [{'name': 'Example', 'repo': 'example/repo', 'parts': [{'text': 'Reviewed claim'}]}]}]}
+            original = json.dumps(source)
+            failures = [
+                {'private': True, 'visibility': 'private', 'stargazers_count': 1},
+                {'private': False, 'visibility': 'public', 'stargazers_count': -1},
+                {'private': False, 'visibility': 'public', 'stargazers_count': True},
+            ]
+            for metadata in failures:
+                path.write_text(original)
+                with self.subTest(metadata=metadata), patch.object(audit, 'ROOT', root), patch.object(audit, 'gh', return_value=metadata):
+                    with self.assertRaises(ValueError):
+                        audit.refresh_stars()
+                self.assertEqual(path.read_text(), original)
+            with patch.object(audit, 'ROOT', root), patch.object(audit, 'gh', return_value={'private': False, 'visibility': 'public', 'stargazers_count': 12}) as api:
+                audit.refresh_stars()
+                api.assert_called_once_with('repos/example/repo')
+            updated = json.loads(path.read_text())
+            self.assertTrue(updated.pop('stars_checked_at'))
+            self.assertEqual(updated['sections'][0]['items'][0].pop('stars'), 12)
+            self.assertEqual(updated, source)
 
 
 if __name__ == '__main__':

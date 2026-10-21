@@ -58,6 +58,39 @@ def check_public():
     print(f'Public-file credential-pattern scan clean: {scanned} files. This is a heuristic check, not proof that arbitrary secrets cannot exist.')
 
 
+def refresh_stars():
+    """Validate all ranking metadata before writing; preserve reviewed claims and audit state."""
+    from concurrent.futures import ThreadPoolExecutor
+    path = ROOT / '.profile/profile.json'
+    source = json.loads(path.read_text())
+    repositories = sorted({item['repo'] for section in source['sections'] for item in section['items']})
+
+    def collect(repo):
+        metadata = gh(f'repos/{repo}')
+        count = metadata.get('stargazers_count')
+        if metadata.get('private') is not False or metadata.get('visibility') != 'public':
+            raise ValueError(f'Repository is not verified public: {repo}')
+        if type(count) is not int or count < 0:
+            raise ValueError(f'Invalid star count: {repo}')
+        return repo, count
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        counts = dict(pool.map(collect, repositories))
+    for section in source['sections']:
+        for item in section['items']:
+            item['stars'] = counts[item['repo']]
+    source['stars_checked_at'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    path.write_text(json.dumps(source, indent=2) + '\n')
+    print(f'Refreshed public GitHub star counts for {len(counts)} repositories')
+
+
+def contribution_sort_key(item):
+    count = item.get('stars')
+    if type(count) is not int or count < 0:
+        raise ValueError(f"Missing or invalid stars for {item['repo']}; run --refresh-stars first")
+    return (-count, item['name'].casefold(), item['repo'].casefold())
+
+
 def render_profile():
     """Render plain-language descriptions with short references, never blue paragraph links."""
     import re
@@ -70,7 +103,7 @@ def render_profile():
     rows = []
     for section in source['sections']:
         rows.extend([f"### {section['title']}", ''])
-        for item in section['items']:
+        for item in sorted(section['items'], key=contribution_sort_key):
             description = []
             for part in item['parts']:
                 description.append(part['text'])
@@ -82,7 +115,8 @@ def render_profile():
                     label = {'pull': 'PR\u00a0#', 'issues': 'Issue\u00a0#', 'commit': 'Commit\u00a0'}[kind]
                     label += identifier[:7] if kind == 'commit' else identifier
                     description.append(f" [`{label}`]({part['url']})")
-            rows.append(f"- **[{item['name']}](https://github.com/{item['repo']})** — {''.join(description)}")
+            badge = f"[![Stars](https://img.shields.io/github/stars/{item['repo']}?style=social)](https://github.com/{item['repo']}/stargazers)"
+            rows.append(f"- **[{item['name']}](https://github.com/{item['repo']})** {badge} — {''.join(description)}")
         rows.append('')
     rows.extend(['[Full public contribution record](CONTRIBUTIONS.md)', ''])
     readme.write_text(prefix + '\n'.join(rows))
@@ -130,11 +164,16 @@ def main():
     parser.add_argument('--output', default='.profile/activity.json')
     parser.add_argument('--timelines', action='store_true', help='Enrich an existing --output report with paginated issue/PR timelines')
     parser.add_argument('--render', action='store_true', help='Render reviewed coverage/profile JSON into CONTRIBUTIONS.md and README.md without network access')
+    parser.add_argument('--refresh-stars', action='store_true', help='Refresh public repository star counts for contribution ordering; combine with --render to regenerate the profile')
     parser.add_argument('--check', action='store_true', help='Scan tracked/non-ignored publication files for credential-shaped content')
     args = parser.parse_args()
     if args.check:
         check_public()
         return
+    if args.refresh_stars:
+        refresh_stars()
+        if not args.render:
+            return
     if args.render:
         render_profile()
         render_coverage()

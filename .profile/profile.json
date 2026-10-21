@@ -79,7 +79,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 7323
         },
         {
           "name": "OpenClaw",
@@ -113,7 +114,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 392694
         },
         {
           "name": "Hermes Agent",
@@ -203,7 +205,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 255625
         },
         {
           "name": "Basic Memory",
@@ -223,7 +226,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 4295
         },
         {
           "name": "cmux",
@@ -253,7 +257,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 28311
         },
         {
           "name": "Orca",
@@ -357,7 +362,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 99913
         },
         {
           "name": "Hindsight",
@@ -384,7 +390,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 52062
         },
         {
           "name": "OpenCodex",
@@ -439,7 +446,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 17699
         },
         {
           "name": "Lark CLI",
@@ -462,7 +470,8 @@
             {
               "text": ", with validation and regression tests."
             }
-          ]
+          ],
+          "stars": 17751
         },
         {
           "name": "Honcho",
@@ -482,7 +491,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 7713
         },
         {
           "name": "Get Shit Done",
@@ -516,7 +526,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 64264
         },
         {
           "name": "notcrawl",
@@ -529,7 +540,8 @@
             {
               "text": ", preserving valid content during partial sync."
             }
-          ]
+          ],
+          "stars": 135
         },
         {
           "name": "HarnessKit",
@@ -542,7 +554,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 469
         },
         {
           "name": "Notion MCP Server",
@@ -555,7 +568,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 177
         },
         {
           "name": "ccgram",
@@ -568,7 +582,8 @@
             {
               "text": ", fixed upstream."
             }
-          ]
+          ],
+          "stars": 279
         },
         {
           "name": "claude-remember",
@@ -581,7 +596,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 201
         },
         {
           "name": "AgentMemory",
@@ -594,7 +610,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 29725
         },
         {
           "name": "NanoClaw",
@@ -607,7 +624,8 @@
             {
               "text": ", followed by the in-tree wrapper fix."
             }
-          ]
+          ],
+          "stars": 30979
         },
         {
           "name": "Fancy",
@@ -623,7 +641,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 3258
         },
         {
           "name": "Amicro",
@@ -636,7 +655,8 @@
             {
               "text": "; maintainer confirmed the serving issue was resolved."
             }
-          ]
+          ],
+          "stars": 2671
         },
         {
           "name": "OpenViking",
@@ -666,7 +686,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 40459
         },
         {
           "name": "Paperclip",
@@ -721,7 +742,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 105284
         },
         {
           "name": "OpenLogi",
@@ -751,7 +773,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 23871
         },
         {
           "name": "XiaomiGateway3",
@@ -764,7 +787,8 @@
             {
               "text": ", incorporated into the released integration."
             }
-          ]
+          ],
+          "stars": 2799
         },
         {
           "name": "coding_agent_session_search",
@@ -777,7 +801,8 @@
             {
               "text": ", shipped in v0.10.0."
             }
-          ]
+          ],
+          "stars": 1188
         },
         {
           "name": "GBrain",
@@ -790,7 +815,8 @@
             {
               "text": ", addressed in the upstream gateway fix."
             }
-          ]
+          ],
+          "stars": 31038
         },
         {
           "name": "acpx",
@@ -803,7 +829,8 @@
             {
               "text": ", fixed upstream."
             }
-          ]
+          ],
+          "stars": 3373
         },
         {
           "name": "FunASR",
@@ -816,7 +843,8 @@
             {
               "text": ", independently confirmed upstream; capability boundaries documented while the native artifact publication remains unresolved."
             }
-          ]
+          ],
+          "stars": 20772
         }
       ]
     },
@@ -841,7 +869,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 3385
         },
         {
           "name": "MCP Python SDK",
@@ -854,7 +883,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 24628
         },
         {
           "name": "Printing Press",
@@ -881,7 +911,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 4839
         },
         {
           "name": "Claude Honcho",
@@ -894,7 +925,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 65
         },
         {
           "name": "OpenCode",
@@ -907,7 +939,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 219044
         },
         {
           "name": "Codex",
@@ -934,7 +967,8 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 130188
         },
         {
           "name": "VoiceMode",
@@ -947,9 +981,11 @@
             {
               "text": "."
             }
-          ]
+          ],
+          "stars": 1410
         }
       ]
     }
-  ]
+  ],
+  "stars_checked_at": "2026-10-21T03:04:15.976184+00:00"
 }
