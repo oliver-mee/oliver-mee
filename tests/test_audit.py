@@ -93,7 +93,7 @@ class CoverageTests(unittest.TestCase):
         self.assertNotIn('basic-memory/pull/1580', self.readme)
 
     def test_plain_descriptions_have_compact_typed_references(self):
-        section = self.readme.split('### Open-source contributions', 1)[1]
+        section = self.readme.split('### Open-source contributions', 1)[1].replace('\u00a0', ' ')
         for label, url in re.findall(r'\[([^\]]+)\]\(([^)]+)\)', section):
             if '/pull/' in url or '/issues/' in url or '/commit/' in url:
                 self.assertRegex(label, r'^`(?:PR #\d+|Issue #\d+|Commit [a-f0-9]{7})`$')
@@ -102,6 +102,15 @@ class CoverageTests(unittest.TestCase):
         models = next(line for line in section.splitlines() if line.startswith('- **[models.dev]'))
         self.assertEqual(len(re.findall(r'\[`PR #\d+`\]', models)), 10)
         self.assertNotIn('[China Token Plan provider]', models)
+
+    def test_reference_labels_stay_together_when_wrapping(self):
+        labels = re.findall(r'\[`([^`]+)`\]\(https://github.com/', self.readme)
+        source = json.loads((self.root / '.profile/profile.json').read_text())
+        expected = sum('url' in part for section in source['sections'] for item in section['items'] for part in item['parts'])
+        self.assertEqual(len(labels), expected)
+        for label in labels:
+            self.assertIn('\u00a0', label)
+            self.assertNotIn(' ', label)
 
     def test_profile_renderer_preserves_intro_and_evidence_and_is_idempotent(self):
         path = self.root / 'README.md'

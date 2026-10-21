@@ -79,7 +79,7 @@ def render_profile():
                     if not match:
                         raise ValueError(f"Invalid evidence target: {part['url']}")
                     kind, identifier = match.groups()
-                    label = {'pull': 'PR #', 'issues': 'Issue #', 'commit': 'Commit '}[kind]
+                    label = {'pull': 'PR\u00a0#', 'issues': 'Issue\u00a0#', 'commit': 'Commit\u00a0'}[kind]
                     label += identifier[:7] if kind == 'commit' else identifier
                     description.append(f" [`{label}`]({part['url']})")
             rows.append(f"- **[{item['name']}](https://github.com/{item['repo']})** — {''.join(description)}")
