@@ -13,12 +13,12 @@ def gh(endpoint):
     return json.loads(subprocess.check_output(['gh', 'api', endpoint], text=True))
 
 
-def search(query):
+def search(query, resource='issues'):
     from urllib.parse import urlencode
     items = []
     page = 1
     while True:
-        result = gh('search/issues?' + urlencode({'q': query, 'per_page': 100, 'page': page}))
+        result = gh(f'search/{resource}?' + urlencode({'q': query, 'per_page': 100, 'page': page}))
         if result.get('incomplete_results'):
             raise RuntimeError('GitHub returned incomplete search results; retry before advancing audit state')
         items.extend(result['items'])
@@ -29,17 +29,96 @@ def search(query):
         page += 1
 
 
+def render_coverage():
+    """Render the reviewed ledger, keeping technical credit separate from routine discussion."""
+    report = json.loads((ROOT / '.profile/coverage.json').read_text())
+    records = report['records']
+    rows = ['# Public contribution record', '',
+            'An evidence-linked record of implementations, active proposals, issue-led fixes, testing and technical review. A closed original PR can still represent landed work; the evidence column records the adopted route. Routine discussion is recorded separately, not presented as code authorship.', '',
+            '## Scope', '', report['scope'], '',
+            f"Reviewed sources: **{report['counts']['authored']} authored items**, **{report['counts']['participated']} other-authored discussions**, across **{report['counts']['repositories']} repositories**. These are activity counts, not merged-PR or implementation counts.", '']
+    def table(items):
+        out = ['| Source | Work | Outcome / role | Evidence |', '| --- | --- | --- | --- |']
+        for r in items:
+            title = r['title'].replace('|', r'\|').replace('\n', ' ')
+            outcome = r['disposition'] + (f". {r['note']}" if r['note'] else '')
+            evidence = ', '.join(f'[adoption / fix]({url})' for url in r['evidence']) or '—'
+            out.append(f"| [{r['kind']} #{r['number']}]({r['source']}) | {title} | {outcome} | {evidence} |")
+        return out
+    routine = []
+    for repo in sorted({r['repo'] for r in records}, key=str.lower):
+        selected = [r for r in records if r['repo'] == repo and not r['disposition'].startswith('discussion/triage/support')]
+        routine.extend(r for r in records if r['repo'] == repo and r['disposition'].startswith('discussion/triage/support'))
+        if selected:
+            rows.extend([f'## [{repo}](https://github.com/{repo})', ''] + table(selected) + [''])
+    rows.extend(['## Other discussion and triage', '',
+                 'These items were checked but are not additional implementation claims. They include support, duplicate triage and comments that do not establish shipped changes.', '',
+                 '<details><summary>Activity appendix</summary>', ''])
+    for repo in sorted({r['repo'] for r in routine}, key=str.lower):
+        rows.extend([f'### {repo}', ''] + table([r for r in routine if r['repo'] == repo]) + [''])
+    rows.extend(['</details>', ''])
+    (ROOT / 'CONTRIBUTIONS.md').write_text('\n'.join(rows))
+    print(f'Rendered {len(records)} reviewed source records into CONTRIBUTIONS.md')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--since', help='Override stored audit timestamp')
+    parser.add_argument('--full', action='store_true', help='Audit since account creation, not the incremental checkpoint')
+    parser.add_argument('--commits', action='store_true', help='Collect authored/co-authored commit candidates instead of PRs/issues')
+    parser.add_argument('--participated', action='store_true', help='Collect other authors’ public items commented on by Oliver')
     parser.add_argument('--output', default='.profile/activity.json')
+    parser.add_argument('--timelines', action='store_true', help='Enrich an existing --output report with paginated issue/PR timelines')
+    parser.add_argument('--render', action='store_true', help='Render reviewed .profile/coverage.json into CONTRIBUTIONS.md without network access')
     args = parser.parse_args()
+    if args.render:
+        render_coverage()
+        return
+    if args.timelines:
+        target = ROOT / args.output
+        report = json.loads(target.read_text())
+        from concurrent.futures import ThreadPoolExecutor
+
+        def enrich(record):
+            endpoint = f'repos/{record["repo"]}/issues/{record["number"]}/timeline?per_page=100'
+            pages = json.loads(subprocess.check_output(['gh', 'api', '--paginate', '--slurp', endpoint], text=True))
+            record['timeline'] = [event for page in pages for event in page
+                                  if event.get('event') in ('closed', 'referenced', 'cross-referenced', 'merged')]
+            return record
+
+        report['records'] = list(ThreadPoolExecutor(max_workers=4).map(enrich, report['records']))
+        target.write_text(json.dumps(report, indent=2) + '\n')
+        print(f'Enriched {len(report["records"])} timelines in {target}')
+        return
     state = json.loads((ROOT / '.profile/state.json').read_text())
-    since = args.since or state['last_audited_through']
+    since = '2022-03-30T00:00:00Z' if args.full else args.since or state['last_audited_through']
     collected = datetime.datetime.now(datetime.timezone.utc).isoformat()
     records = []
+    if args.commits:
+        seen = set()
+        queries = [f'author:oliver-mee is:public committer-date:>={since}',
+                   f'"Co-authored-by" "oliver-mee" is:public committer-date:>={since}']
+        for query in queries:
+            for item in search(query, 'commits'):
+                repo = item['repository']['full_name']
+                if repo.split('/')[0].lower() in ('oliver-mee', 'preface-ai', 'prefacecontent', 'magven-org'):
+                    continue
+                key = (repo, item['sha'])
+                if key in seen:
+                    continue
+                seen.add(key)
+                records.append({'repo': repo, 'sha': item['sha'], 'html_url': item['html_url'],
+                                'message': item['commit']['message'], 'author': item['commit']['author'],
+                                'matched_query': query})
+        target = ROOT / args.output
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(json.dumps({'since': since, 'collected_at': collected, 'queries': queries,
+                                    'records': records, 'note': 'Commit candidates; verify default-branch reachability and exclude fork mirrors before claiming new upstream work.'}, indent=2) + '\n')
+        print(f'Collected {len(records)} commit candidates into {target}')
+        return
+    actor_query = 'commenter:oliver-mee -author:oliver-mee' if args.participated else 'author:oliver-mee'
     for kind in ('pr', 'issue'):
-        for item in search(f'author:oliver-mee is:{kind} is:public updated:>={since}'):
+        for item in search(f'{actor_query} is:{kind} is:public updated:>={since}'):
             repo = item['repository_url'].split('/repos/', 1)[1]
             if repo.split('/')[0].lower() in ('oliver-mee', 'preface-ai', 'prefacecontent', 'magven-org'):
                 continue

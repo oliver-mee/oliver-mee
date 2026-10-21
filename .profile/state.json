@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "last_full_audit": "2026-09-18",
-  "last_audited_through": "2026-10-21T01:32:24.700339+00:00",
+  "last_full_audit": "2026-10-21",
+  "last_audited_through": "2026-10-21T02:24:51.801517+00:00",
   "known_contribution_repos": [
     "anomalyco/models.dev",
     "openclaw/openclaw",
@@ -27,7 +27,17 @@
     "paperclipai/paperclip",
     "AprilNEA/OpenLogi",
     "AlexxIT/XiaomiGateway3",
-    "Dicklesworthstone/coding_agent_session_search"
+    "Dicklesworthstone/coding_agent_session_search",
+    "garrytan/gbrain",
+    "openclaw/acpx",
+    "modelscope/FunASR",
+    "taylorwilsdon/google_workspace_mcp",
+    "modelcontextprotocol/python-sdk",
+    "mvanhorn/cli-printing-press",
+    "plastic-labs/claude-honcho",
+    "anomalyco/opencode",
+    "openai/codex",
+    "mbailey/voicemode"
   ],
   "special_cases": [
     {
@@ -157,6 +167,187 @@
       "source": "https://github.com/NousResearch/hermes-agent/pull/85851",
       "evidence": "https://github.com/NousResearch/hermes-agent/pull/121996",
       "note": "Maintainer explicitly credits vendor-casing diagnosis/code; replacement merged. Inspected commit has no Oliver co-author footer, so do not assert verified commit co-authorship."
+    },
+    {
+      "repo": "lidge-jun/opencodex",
+      "source": "https://github.com/lidge-jun/opencodex/pull/4788",
+      "evidence": "https://github.com/lidge-jun/opencodex/pull/4888",
+      "note": "adopted implementation; co-author"
+    },
+    {
+      "repo": "anomalyco/models.dev",
+      "source": "https://github.com/anomalyco/models.dev/pull/7148",
+      "evidence": "https://github.com/anomalyco/models.dev/pull/7203",
+      "note": "superseded by Oliver\u2019s merged revision"
+    },
+    {
+      "repo": "lidge-jun/opencodex",
+      "source": "https://github.com/lidge-jun/opencodex/pull/4203",
+      "evidence": "https://github.com/lidge-jun/opencodex/pull/4235",
+      "note": "adopted implementation; credited carry"
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "source": "https://github.com/NousResearch/hermes-agent/pull/96895",
+      "evidence": "https://github.com/NousResearch/hermes-agent/pull/99672",
+      "note": "adopted implementation; original author"
+    },
+    {
+      "repo": "openclaw/openclaw",
+      "source": "https://github.com/openclaw/openclaw/pull/113578",
+      "evidence": "https://github.com/openclaw/openclaw/pull/131294",
+      "note": "adopted model-support outcome; co-author"
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "source": "https://github.com/NousResearch/hermes-agent/pull/66133",
+      "evidence": "https://github.com/NousResearch/hermes-agent/commit/19e51d2ccabf6c7f5d2f230777e9a9faedf84aa9",
+      "note": "landed implementation; original author"
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "source": "https://github.com/NousResearch/hermes-agent/pull/46554",
+      "evidence": "https://github.com/NousResearch/hermes-agent/pull/67920",
+      "note": "first-submitter design credit; different final implementation"
+    },
+    {
+      "repo": "paperclipai/paperclip",
+      "source": "https://github.com/paperclipai/paperclip/pull/4189",
+      "evidence": "https://github.com/paperclipai/paperclip/pull/4189",
+      "note": "issue templates adopted; do not claim all workflow changes"
+    },
+    {
+      "repo": "anomalyco/models.dev",
+      "source": "https://github.com/anomalyco/models.dev/issues/10542",
+      "evidence": "https://github.com/anomalyco/models.dev/pull/10544",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "openclaw/acpx",
+      "source": "https://github.com/openclaw/acpx/issues/747",
+      "evidence": "https://github.com/openclaw/acpx/pull/778",
+      "note": "issue-led upstream fix; no code-authorship claim"
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "https://github.com/stablyai/orca/issues/21119",
+      "evidence": "https://github.com/stablyai/orca/pull/26306",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "anomalyco/models.dev",
+      "source": "https://github.com/anomalyco/models.dev/issues/7146",
+      "evidence": "https://github.com/anomalyco/models.dev/pull/7147",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "vectorize-io/hindsight",
+      "source": "https://github.com/vectorize-io/hindsight/issues/4353",
+      "evidence": "https://github.com/vectorize-io/hindsight/pull/4430",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "vectorize-io/hindsight",
+      "source": "https://github.com/vectorize-io/hindsight/issues/4352",
+      "evidence": "https://github.com/vectorize-io/hindsight/pull/4439",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "source": "https://github.com/NousResearch/hermes-agent/issues/107177",
+      "evidence": "https://github.com/NousResearch/hermes-agent/pull/107186",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "anomalyco/models.dev",
+      "source": "https://github.com/anomalyco/models.dev/issues/6661",
+      "evidence": "https://github.com/anomalyco/models.dev/pull/6663",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "basicmachines-co/basic-memory",
+      "source": "https://github.com/basicmachines-co/basic-memory/issues/1336",
+      "evidence": "https://github.com/basicmachines-co/basic-memory/pull/1370",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "basicmachines-co/basic-memory",
+      "source": "https://github.com/basicmachines-co/basic-memory/issues/1334",
+      "evidence": "https://github.com/basicmachines-co/basic-memory/pull/1354",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "Subhan-code/Amicro--Micro-transitions-",
+      "source": "https://github.com/Subhan-code/Amicro--Micro-transitions-/issues/8",
+      "evidence": "https://github.com/Subhan-code/Amicro--Micro-transitions-/issues/8",
+      "note": "maintainer confirmed resolution; no code-authorship claim"
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "source": "https://github.com/NousResearch/hermes-agent/issues/86154",
+      "evidence": "https://github.com/NousResearch/hermes-agent/pull/69446",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "modelscope/FunASR",
+      "source": "https://github.com/modelscope/FunASR/issues/3496",
+      "evidence": "https://github.com/modelscope/FunASR/issues/3496",
+      "note": "confirmed investigation; capability documentation updated; native publication unresolved"
+    },
+    {
+      "repo": "manaflow-ai/cmux",
+      "source": "https://github.com/manaflow-ai/cmux/issues/9793",
+      "evidence": "https://github.com/manaflow-ai/cmux/pull/14974",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "garrytan/gbrain",
+      "source": "https://github.com/garrytan/gbrain/issues/3350",
+      "evidence": "https://github.com/garrytan/gbrain/pull/4475",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "manaflow-ai/cmux",
+      "source": "https://github.com/manaflow-ai/cmux/issues/8315",
+      "evidence": "https://github.com/manaflow-ai/cmux/pull/8438",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "source": "https://github.com/NousResearch/hermes-agent/issues/66106",
+      "evidence": "https://github.com/NousResearch/hermes-agent/commit/19e51d2ccabf6c7f5d2f230777e9a9faedf84aa9",
+      "note": "landed original implementation"
+    },
+    {
+      "repo": "gsd-build/get-shit-done",
+      "source": "https://github.com/gsd-build/get-shit-done/issues/2505",
+      "evidence": "https://github.com/gsd-build/get-shit-done/pull/2511",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "gsd-build/get-shit-done",
+      "source": "https://github.com/gsd-build/get-shit-done/issues/2009",
+      "evidence": "https://github.com/gsd-build/get-shit-done/pull/2027",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "gsd-build/get-shit-done",
+      "source": "https://github.com/gsd-build/get-shit-done/issues/1885",
+      "evidence": "https://github.com/gsd-build/get-shit-done/pull/2074",
+      "note": "issue-led upstream fix"
+    },
+    {
+      "repo": "gsd-build/get-shit-done",
+      "source": "https://github.com/gsd-build/get-shit-done/issues/1571",
+      "evidence": "https://github.com/gsd-build/get-shit-done/pull/1599",
+      "note": "issue-led upstream fix"
     }
-  ]
+  ],
+  "full_audit_scope": "Public authored PRs/issues since account creation; other-authored items commented on by Oliver; authored/co-authored commit search with fork-mirror deduplication. GitHub search is not an exhaustive record of review-only activity, deleted/private contributions or unindexed commits.",
+  "full_audit_counts": {
+    "authored": 160,
+    "participated": 102,
+    "repositories": 42
+  },
+  "reviewed_coverage_file": ".profile/coverage.json"
 }

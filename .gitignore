@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+.profile/full-history.json
+.profile/participation-history.json
+.profile/commit-history.json
+.profile/*-verification.json
