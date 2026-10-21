@@ -8,7 +8,7 @@ The instructions are runner-agnostic. Hermes is currently the intended cron runn
 
 Keep `README.md` current without repeatedly re-auditing Oliver's entire GitHub history.
 
-Read `.profile/state.json` first. Treat the current README and the state's known contribution repositories as the established baseline. Inspect activity newer than `last_audited_through`. Do not rescan older history unless a newer event changes how an older contribution should be described.
+Read `.profile/state.json` and the reviewed `.profile/coverage.json` first. Incremental collection is appropriate only after the full-history baseline has been reconciled. A saved checkpoint is not proof of complete coverage. When Oliver challenges omissions, use `--full`, inspect authored activity, commented-on items, commit attribution and closed-item timelines, and reconcile every candidate before updating the baseline. Keep historical implementation, diagnosis and independent testing credit separate from current stack usage.
 
 If nothing meaningful changed, make no commit and open no PR.
 
@@ -39,9 +39,13 @@ Open PRs can appear while active, but their wording must not imply that the chan
 ## Writing the contribution ledger
 
 - Keep exactly one bullet per repository and aggregate related work into that bullet.
+- Sort repositories in each contribution section by descending GitHub star count, with alphabetical name/repository ties. Use `python3 scripts/audit.py --refresh-stars --render` when preparing an update: it verifies public visibility, stores counts and `stars_checked_at` in `.profile/profile.json`, and renders from that snapshot. Plain `--render` remains offline and deterministic. Star metadata refreshes do not change contribution claims or advance the audit checkpoint. Keep the implementation and testing/review sections distinct.
+- Show a small clickable Shields.io GitHub-stars badge beside each contribution project's linked name. Badge counts update independently; ordering reflects the last verified snapshot, so refresh ordering during profile maintenance rather than treating a live badge as a live sort.
+- Keep the opening README free of the removed `Preface · Hong Kong` line. GitHub's `oliver-mee/README.md` profile-card label is outside the README; it cannot be removed by editing Markdown, CSS or HTML in this repository.
 - Describe concrete changes, bugs, integrations or technical areas. Avoid generic résumé language such as "contributed to" or "worked on".
 - Prefer compact noun phrases separated by commas or semicolons.
-- Link descriptive contribution phrases to the relevant PR, adopted replacement or issue-led fix. Keep repository-name links pointing at the project. Avoid bare PR numbers and replacement-process commentary; describe landed work directly, and label genuinely open proposals.
+- Use plain-text contribution descriptions followed by compact, code-styled evidence links: ``China Token Plan provider [`PR #2145`](https://github.com/anomalyco/models.dev/pull/2145)``. Label issue and commit references distinctly. Keep repository-name links pointing at the project. GitHub's native shortened/rich issue references are conversation features, not README-file features; do not promise native PR pills or unfurls. Never link whole prose descriptions or use one reference for unrelated changes. Keep landed work direct and genuinely open proposals labelled.
+- `.profile/profile.json` is the reviewed contribution-display source. Edit its text/reference parts, then run `python3 scripts/audit.py --render`; do not hand-edit the generated contribution sections. The introduction, stack and Projects sections are preserved by the renderer. Reference labels use a non-breaking space so the kind and number stay together on mobile. Explicit PR links retain GitHub-native hovercards; verify the rendered GitHub page at the tested commit rather than assuming Markdown appearance from source.
 - Do not explain the tracking methodology in the README.
 - Preserve existing contributions unless new evidence changes them.
 - Add a new repository only when the activity meets the meaningful-contribution standard above.
@@ -68,7 +72,21 @@ Do not rewrite it during routine maintenance.
 
 ## Reusable audit command
 
-Run `python3 scripts/audit.py` from any directory. It uses the saved audit timestamp, paginates public external PRs and issues through authenticated `gh`, reads actual PR merge status (closed is not merged), and collects human discussion for review in `.profile/activity.json`. `--since TIMESTAMP` replays a window; `--output PATH` writes a different repo-relative report. It does not edit the README or advance the checkpoint automatically. The report is public-source evidence, not an automatically approved contribution list.
+Run `python3 scripts/audit.py` from any directory for incremental collection. For a challenged or missing baseline, use:
+
+```sh
+python3 scripts/audit.py --full --output .profile/full-history.json
+python3 scripts/audit.py --timelines --output .profile/full-history.json
+python3 scripts/audit.py --full --participated --output .profile/participation-history.json
+python3 scripts/audit.py --full --commits --output .profile/commit-history.json
+# Review evidence and update .profile/coverage.json and .profile/profile.json.
+python3 scripts/audit.py --render
+python3 scripts/audit.py --check
+```
+
+The collector paginates public-source `gh` searches, checks real merge status and reads discussion/timeline evidence. Commit search results must be deduplicated by SHA: copies in downstream forks are not separate contributions. Verify original authorship and default-branch ancestry in the canonical upstream when search returns a fork instead. Search cannot prove the absence of unindexed, review-only or deleted activity; retain known evidence beyond the search results.
+
+New full-history raw collection reports are local working evidence and are ignored by Git. Commit the reviewed coverage ledger and rendered `CONTRIBUTIONS.md`, not large third-party discussion dumps. The older committed `.profile/activity.json` is a historical incremental snapshot, not the coverage baseline. The full record distinguishes directly merged work, adopted implementations, issue-led fixes, independent testing/review and activity not claimed as implementation. An update to the main profile must be reconciled against that record, not selected from a truncated search result.
 
 Run `python3 -m unittest discover -s tests` for the collector tests.
 
