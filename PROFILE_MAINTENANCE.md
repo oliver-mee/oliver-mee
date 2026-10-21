@@ -65,6 +65,16 @@ The opening line is intentionally:
 
 Do not rewrite it during routine maintenance.
 
+## Reusable audit command
+
+Run `python3 scripts/audit.py` from any directory. It uses the saved audit timestamp, paginates public external PRs and issues through authenticated `gh`, reads actual PR merge status (closed is not merged), and collects human discussion for review in `.profile/activity.json`. `--since TIMESTAMP` replays a window; `--output PATH` writes a different repo-relative report. It does not edit the README or advance the checkpoint automatically. The report is public-source evidence, not an automatically approved contribution list.
+
+Run `python3 -m unittest discover -s tests` for the collector tests.
+
+For each closed original PR, inspect the discussion and linked replacement PR. Verify that the replacement merged, then inspect its commits for Oliver's original author identity or `Co-authored-by: ... <102673257+oliver-mee@users.noreply.github.com>`. Record original URL, replacement URL, credited commit and attribution kind in `special_cases`. A maintainer's explicit adoption statement can support a contribution even without a co-author footer, but do not label that verified commit authorship. Never discard adopted work merely because the original PR is closed. Conversely, remove implementation claims for declined work with no adoption evidence.
+
+Retain historical contributions even when Oliver no longer uses the product. Keep current-stack membership separate from contribution history. Review the saved special cases on every refresh; an author-only search cannot discover all maintainer-authored replacement PRs.
+
 ## Update procedure
 
 1. Read `README.md`, this file and `.profile/state.json`.

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "last_full_audit": "2026-09-18",
-  "last_audited_through": "2026-09-18T13:56:00+08:00",
+  "last_audited_through": "2026-10-21T01:32:24.700339+00:00",
   "known_contribution_repos": [
     "anomalyco/models.dev",
     "openclaw/openclaw",
@@ -22,7 +22,12 @@
     "rohitg00/agentmemory",
     "nanocoai/nanoclaw",
     "danielpetho/fancy",
-    "Subhan-code/Amicro--Micro-transitions-"
+    "Subhan-code/Amicro--Micro-transitions-",
+    "volcengine/OpenViking",
+    "paperclipai/paperclip",
+    "AprilNEA/OpenLogi",
+    "AlexxIT/XiaomiGateway3",
+    "Dicklesworthstone/coding_agent_session_search"
   ],
   "special_cases": [
     {
@@ -41,14 +46,13 @@
       "repo": "basicmachines-co/basic-memory",
       "sources": [
         "https://github.com/basicmachines-co/basic-memory/issues/1334",
-        "https://github.com/basicmachines-co/basic-memory/issues/1336",
-        "https://github.com/basicmachines-co/basic-memory/pull/1580"
+        "https://github.com/basicmachines-co/basic-memory/issues/1336"
       ],
       "evidence": [
         "https://github.com/basicmachines-co/basic-memory/pull/1354",
         "https://github.com/basicmachines-co/basic-memory/pull/1370"
       ],
-      "note": "Issue-led fixes for CLI project reconciliation and custom OpenAI embedding endpoints; PR #1580 is a current direct Codex MCP fix."
+      "note": "Issue-led fixes for CLI project reconciliation and custom OpenAI embedding endpoints. PR #1580 was declined; do not claim its persistent-launcher change shipped."
     },
     {
       "repo": "manaflow-ai/cmux",
@@ -95,6 +99,64 @@
         "https://github.com/gsd-build/get-shit-done/pull/2074"
       ],
       "note": "Multiple diagnosed issues resulted in merged upstream fixes."
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "https://github.com/stablyai/orca/pull/26070",
+      "evidence": "https://github.com/stablyai/orca/pull/28221",
+      "commit": "https://github.com/stablyai/orca/commit/5383f470150ede395c5a61e1382922c0b0055aaf",
+      "credit": "co-author",
+      "note": "Original closed in favour of merged replacement. Verified commit attribution; retain contribution credit."
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "https://github.com/stablyai/orca/pull/26154",
+      "evidence": "https://github.com/stablyai/orca/pull/28269",
+      "commit": "https://github.com/stablyai/orca/commit/4a9786052a6bd9a88b73c0ef13c7676073623fd7",
+      "credit": "co-author",
+      "note": "Original closed in favour of merged replacement. Verified commit attribution; retain contribution credit."
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "https://github.com/stablyai/orca/pull/30351",
+      "evidence": "https://github.com/stablyai/orca/pull/30452",
+      "commit": "https://github.com/stablyai/orca/commit/e4f8d178b82e0cec0cb3e9a6a737bcbf12fbd701",
+      "credit": "original author",
+      "note": "Original closed in favour of merged replacement. Verified commit attribution; retain contribution credit."
+    },
+    {
+      "repo": "stablyai/orca",
+      "source": "https://github.com/stablyai/orca/pull/22772",
+      "evidence": "https://github.com/stablyai/orca/pull/27464",
+      "commit": "https://github.com/stablyai/orca/commit/8eedfb8870c5f9f996cfbe53079a310b622a4b37",
+      "credit": "original author",
+      "note": "Original closed in favour of merged replacement. Verified commit attribution; retain contribution credit."
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "source": "https://github.com/NousResearch/hermes-agent/pull/86160",
+      "evidence": "https://github.com/NousResearch/hermes-agent/pull/117451",
+      "commit": "https://github.com/NousResearch/hermes-agent/commit/6d3bb46ff7dcceb8c290e39a265da8ad5d0051f4",
+      "credit": "co-author",
+      "note": "Original closed in favour of merged replacement. Verified commit attribution; retain contribution credit."
+    },
+    {
+      "repo": "AlexxIT/XiaomiGateway3",
+      "source": "https://github.com/AlexxIT/XiaomiGateway3/pull/1781",
+      "evidence": "https://github.com/AlexxIT/XiaomiGateway3/commit/5b667baa661ed76330306e84f606cac2468da815",
+      "note": "Maintainer explicitly adapted the original implementation; released in v4.3.0. Do not equate this with a directly merged original PR."
+    },
+    {
+      "repo": "Dicklesworthstone/coding_agent_session_search",
+      "source": "https://github.com/Dicklesworthstone/coding_agent_session_search/issues/504",
+      "evidence": "https://github.com/Dicklesworthstone/coding_agent_session_search/releases/tag/v0.10.0",
+      "note": "Maintainer confirmed diagnosis and reproduced/fixed OpenCode 2 indexing; shipped via franken-agent-detection 0.3.3."
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "source": "https://github.com/NousResearch/hermes-agent/pull/85851",
+      "evidence": "https://github.com/NousResearch/hermes-agent/pull/121996",
+      "note": "Maintainer explicitly credits vendor-casing diagnosis/code; replacement merged. Inspected commit has no Oliver co-author footer, so do not assert verified commit co-authorship."
     }
   ]
 }

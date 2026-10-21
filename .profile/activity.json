@@ -1,0 +1,1341 @@
+{
+  "since": "2026-09-18T13:56:00+08:00",
+  "collected_at": "2026-10-21T01:32:24.700339+00:00",
+  "records": [
+    {
+      "number": 142141,
+      "title": "feat(catalog): add Token Plan v2 chat and native media",
+      "html_url": "https://github.com/NousResearch/hermes-agent/pull/142141",
+      "state": "open",
+      "updated_at": "2026-10-20T18:05:41Z",
+      "repo": "NousResearch/hermes-agent",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/142141#issuecomment-6295673238",
+          "author": "whyyagswhy",
+          "body": "Verified head SHA 8903e8fe matches PR. Two new catalog entries (alibaba-token-plan-media, alibaba-token-plan-provider); both YAML parse. No tests applicable."
+        }
+      ]
+    },
+    {
+      "number": 7449,
+      "title": "test: bound shell integration scenarios independently",
+      "html_url": "https://github.com/lidge-jun/opencodex/pull/7449",
+      "state": "open",
+      "updated_at": "2026-10-20T16:26:59Z",
+      "repo": "lidge-jun/opencodex",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/lidge-jun/opencodex/pull/7449#issuecomment-6295550216",
+          "author": "oliver-mee",
+          "body": "@coderabbitai review\n"
+        }
+      ]
+    },
+    {
+      "number": 1909,
+      "title": "fix(agent): continue volume gestures through the shared policy",
+      "html_url": "https://github.com/AprilNEA/OpenLogi/pull/1909",
+      "state": "open",
+      "updated_at": "2026-10-20T23:50:32Z",
+      "repo": "AprilNEA/OpenLogi",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": true,
+      "discussion": []
+    },
+    {
+      "number": 31124,
+      "title": "feat(serve): report manual updates without changing supervisor ownership",
+      "html_url": "https://github.com/stablyai/orca/pull/31124",
+      "state": "open",
+      "updated_at": "2026-10-20T12:34:49Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": true,
+      "discussion": []
+    },
+    {
+      "number": 31121,
+      "title": "feat(automations): refresh incoming webhooks for current runtime",
+      "html_url": "https://github.com/stablyai/orca/pull/31121",
+      "state": "open",
+      "updated_at": "2026-10-20T13:46:42Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": true,
+      "discussion": []
+    },
+    {
+      "number": 31116,
+      "title": "fix(browser): select host-owned profiles in client-hosted toolbar",
+      "html_url": "https://github.com/stablyai/orca/pull/31116",
+      "state": "open",
+      "updated_at": "2026-10-20T11:54:25Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": true,
+      "discussion": []
+    },
+    {
+      "number": 7439,
+      "title": "fix(providers): refresh dated Token Plan catalogue and metadata",
+      "html_url": "https://github.com/lidge-jun/opencodex/pull/7439",
+      "state": "open",
+      "updated_at": "2026-10-20T14:25:39Z",
+      "repo": "lidge-jun/opencodex",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": true,
+      "discussion": [
+        {
+          "url": "https://github.com/lidge-jun/opencodex/pull/7439#issuecomment-6290689704",
+          "author": "Ingwannu",
+          "body": "Follow-up intake at `f176dff6749972c37b66635277168a4316262a02` against dev `12025981e5a304cdb6b1b54f525ba8554f623977`. The diff keeps discovery off, default models/three Beijing Responses pins unchanged and uses the existing full structured-output opt-out for the unverified dated-ID JSON behavior. Independent 2026-10-20 primary-page inspection confirms the CN Personal overview now lists 0813/1017 and image capability, and the international overview distinguishes Personal/Team subscriptions. The two exact model-card pages were unavailable in this verification session, so I cannot independently certify their numeric/output/effort details or the new canonical host admission from those cards. Keep destination migration/explicit saved URLs, exact dated metadata and Global-Personal-only measurements separate, with current evidence captured for owner review. No CN/Team inference, exact output boundary, live discovery or provider call is claimed. Sources: [CN Personal](https://help.aliyun.com/en/model-studio/token-plan-personal-overview), [international overview](https://www.alibabacloud.com/help/en/model-studio/token-plan-overview)."
+        },
+        {
+          "url": "https://github.com/lidge-jun/opencodex/pull/7439#issuecomment-6291152051",
+          "author": "oliver-mee",
+          "body": "@coderabbitai review\n\n@codex review\n\nPlease review current head 38d6116863b5b5c768103e720efcffad595ad40d. The PR remains draft while local validation and full-run failure classification are incomplete.\n"
+        },
+        {
+          "url": "https://github.com/lidge-jun/opencodex/pull/7439#issuecomment-6291877675",
+          "author": "oliver-mee",
+          "body": "@coderabbitai full review\n\n@codex review\n\nPlease review the complete changeset at exact head `b4169fe03c4517683c47bd3baf39e9e3e30263da`, including exact-old-roster repair, legacy endpoint preservation and exact-ID structured-output policy. Earlier substantive review was on `38d6116863b5b5c768103e720efcffad595ad40d`; a skipped draft status is not an approval. Please do not infer readiness from this request.\n\n### Full-run failure attribution follow-up\n\nCompared current head `b4169fe03c4517683c47bd3baf39e9e3e30263da` with clean dev `12025981e5a304cdb6b1b54f525ba8554f623977` (still the current remote dev tip). Ran each file separately, current then baseline, never concurrently, using `OCX_TEST_RUNNER_BUN` pinned to Bun 1.4.3 and the repository's shared user lock and isolated test homes:\n\n```sh\nbun run test --parallel=2 <file-from-table>\n```\n\n| File | PR head | Pristine dev |\n| --- | --- | --- |\n| `tests/clients/remote-workspace.test.ts` | 17 pass, 0 skip, 0 fail (exit 0) | 17 pass, 0 skip, 0 fail (exit 0) |\n| `tests/claude-integration/claude-desktop-remote-hub.test.ts` | 1 pass, 0 skip, 1 fail (exit 1) | 1 pass, 0 skip, 1 fail (exit 1) |\n| `tests/responses/responses-inbound-store-default.test.ts` | 6 pass, 0 skip, 0 fail (exit 0) | 6 pass, 0 skip, 0 fail (exit 0) |\n| `tests/cli/cli-status-json.test.ts` | 60 pass, 0 skip, 1 fail (exit 1) | 60 pass, 0 skip, 1 fail (exit 1) |\n| `tests/cli/cli-connect-readiness.test.ts` | 26 pass, 1 skip, 1 fail (exit 1) | 26 pass, 1 skip, 1 fail (exit 1) |\n| `tests/codex-integration/codex-runtime.test.ts` | 58 pass, 0 skip, 1 fail (exit 1) | 58 pass, 0 skip, 1 fail (exit 1) |\n| `tests/codex-integration/issue-702-expired-replay-state.test.ts` | 24 pass, 0 skip, 0 fail (exit 0) | 24 pass, 0 skip, 0 fail (exit 0) |\n| `tests/codex-integration/native-profile-drain-server.test.ts` | 3 pass, 0 skip, 0 fail (exit 0) | 3 pass, 0 skip, 0 fail (exit 0) |\n| `tests/lib/socks5-fetch.test.ts` | 30 pass, 0 skip, 0 fail (exit 0) | 30 pass, 0 skip, 0 fail (exit 0) |\n| `tests/codex-integration/issue-452-empty-503.test.ts` | 17 pass, 0 skip, 0 fail (exit 0) | 17 pass, 0 skip, 0 fail (exit 0) |\n\nThe prior full run has 37 failing case records across its primary and serial lanes, not 37 new failures:\n\n- 12 introduced migration/warning failures were corrected previously and are covered by the existing 384-pass exact-head regression run. No new source fix was needed in this investigation.\n- 4 failures reproduce on pristine dev with the same assertions: Desktop cold-restart model ordering (line 249); Codex runtime source expected fallback but observed installed (line 866); preferred-runtime fallback expected two bundled-model probes that did not happen (line 527); status JSON's broad forbidden-word check matches `token` in the checkout directory name, not credential material (line 425). These are baseline/environment failures, not introduced regressions. All ten test files in the table are byte-identical to baseline.\n- 21 earlier failures do not reproduce in either standalone checkout: hardlink rejection message (1), forward store defaults (3), expired replay state (12), SOCKS global fetch (1), native-profile drain admission (3), and the serial Retry-After test (1). The old log shows 5000ms timeouts for the store, SOCKS and Retry-After cases. Replay and drain each start with a timeout, followed by spend-state ownership refusal in later cases. The hardlink operation was refused but the error text differed. This is concrete full-run-only evidence, not proof that pristine dev fails under the same full-run conditions. Their cross-file/load attribution remains unresolved.\n\nThe full suite was not repeated: its earlier 870-second cost and the shared serialized queue justify the documented resource exception, but focused success does not establish full-suite equivalence. Required exact-head CI and substantive review remain separate requirements. The four readiness boxes stay unchecked and the PR stays draft pending resolution or an explicitly accepted validation scope for these full-run-only failures.\n\n\nThe canonical destination changes also still need maintainer scrutiny; no paid inference or live configuration changes were made.\n"
+        },
+        {
+          "url": "https://github.com/lidge-jun/opencodex/pull/7439#issuecomment-6292304310",
+          "author": "oliver-mee",
+          "body": "@codex review\n\n@coderabbitai full review\n\nCurrent head b85b6fd2ce6e3b9415815d1efcd19d2e995cc694 fixes the verified Beijing destination-alias regression. The International alias is also registry-owned for saved-host migrations; its existing override guard is unchanged. Saved URLs are not rewritten.\n\nPinned Bun 1.4.3, shared lock and isolated runner: `bun run test --parallel=2 tests/providers/alibaba-region-migration.test.ts tests/providers/model-rename-migration.test.ts tests/providers/provider-registry-parity.test.ts` passed 124 tests, 0 failures, 2908 assertions across 3 files. Typecheck, privacy scan, structure check and diff whitespace check passed. The earlier 384-test run and full-run classification remain evidence for their stated older head, not this new head. No repeated full suite or baseline comparisons.\n\nCodeRabbit's optional test-deduplication nit is deferred to keep the independent old-seed fixtures explicit and avoid unrelated churn. It identified no behavior defect.\n\nThe full-run-only attribution remains unresolved, not green. All four readiness boxes remain unchecked; exact-head substantive review, actual required CI and maintainer destination/security review remain outstanding."
+        },
+        {
+          "url": "https://github.com/lidge-jun/opencodex/pull/7439#issuecomment-6292638772",
+          "author": "oliver-mee",
+          "body": "Current head: f09b117a563f952a53fa1600f0409803e0eb382f.\n\nFixed the custom-name Beijing 1017 structured-output regression and removed the duplicated International host authority in region repair. Kept the existing International destination-lookup override guard; the inline reply explains why that suggestion would expand previous behavior.\n\nPinned Bun 1.4.3, isolated homes and shared runner lock: `bun run test --parallel=2 tests/providers/alibaba-token-plan-responses-optin.test.ts tests/providers/alibaba-region-migration.test.ts tests/providers/model-rename-migration.test.ts tests/providers/provider-registry-parity.test.ts` returned 149 pass, 0 fail, 3006 assertions across four files. Typecheck, privacy scan, structure check and diff check passed. The new canonical/historical Beijing cases reproduced before the fix and now cover both Chat builders, operator opt-out preservation and an unrelated-host control.\n\nThe earlier full-run attribution is unchanged, not full-suite green. Draft and all four readiness boxes remain unchanged. Please review this exact head.\n\n@coderabbitai full review\n@codex review\n"
+        }
+      ]
+    },
+    {
+      "number": 7435,
+      "title": "Add opt-in tier routing for Claude ingress",
+      "html_url": "https://github.com/lidge-jun/opencodex/pull/7435",
+      "state": "open",
+      "updated_at": "2026-10-20T13:31:00Z",
+      "repo": "lidge-jun/opencodex",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": []
+    },
+    {
+      "number": 10543,
+      "title": "fix(alibaba-token-plan): sync DeepSeek model availability",
+      "html_url": "https://github.com/anomalyco/models.dev/pull/10543",
+      "state": "closed",
+      "updated_at": "2026-10-20T17:36:32Z",
+      "repo": "anomalyco/models.dev",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": []
+    },
+    {
+      "number": 30353,
+      "title": "fix(browser): restore viewport controls for client-hosted pages",
+      "html_url": "https://github.com/stablyai/orca/pull/30353",
+      "state": "open",
+      "updated_at": "2026-10-20T06:32:43Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": []
+    },
+    {
+      "number": 30351,
+      "title": "fix(browser): switch client-hosted profiles with staged guest replacement",
+      "html_url": "https://github.com/stablyai/orca/pull/30351",
+      "state": "closed",
+      "updated_at": "2026-10-18T23:48:15Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/pull/30351#issuecomment-6256680725",
+          "author": "nwparker",
+          "body": "Thank you @oliver-mee. Your staged-replacement design is the basis of #30452, which carries your commit (you remain its author) rebased onto current main, plus follow-ups from review: fencing the staged guest during the switch, keeping the original placement until a timed-out switch settles, releasing the execution-host grant and only the replaced generation's download transfers, carrying host-owned profile metadata on createPage/restorePage so switched pages can be recovered, and resolving folder-workspace targets through the client-page catalog. Closing this in favour of #30452."
+        }
+      ]
+    },
+    {
+      "number": 29054,
+      "title": "fix(browser): import cookie files into client-hosted sessions",
+      "html_url": "https://github.com/stablyai/orca/pull/29054",
+      "state": "open",
+      "updated_at": "2026-10-20T06:24:26Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/pull/29054#issuecomment-6250696599",
+          "author": "oliver-mee",
+          "body": "Updated against main 506aa0319 in 06b53aaff. All 38 focused tests and both Node and renderer typechecks pass again. The native partition regression checks that imports reach the client route partition without touching the local profile jar.\n\nThis stays draft pending the before/after interaction evidence. No cookie policy or Google-import exclusion was changed.\n"
+        }
+      ]
+    },
+    {
+      "number": 2814,
+      "title": "fix(ci): skip superseded workflow runs without PR bindings",
+      "html_url": "https://github.com/larksuite/cli/pull/2814",
+      "state": "open",
+      "updated_at": "2026-10-14T02:48:58Z",
+      "repo": "larksuite/cli",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": []
+    },
+    {
+      "number": 1781,
+      "title": "Recover Hub 2 gateway key over LAN and during HA setup",
+      "html_url": "https://github.com/AlexxIT/XiaomiGateway3/pull/1781",
+      "state": "closed",
+      "updated_at": "2026-10-15T12:57:01Z",
+      "repo": "AlexxIT/XiaomiGateway3",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/AlexxIT/XiaomiGateway3/pull/1781#issuecomment-6171283436",
+          "author": "AlexxIT",
+          "body": "Thanks! Your PR is a really great job! But I rewrote it and fit it into a hundred lines - https://github.com/AlexxIT/XiaomiGateway3/commit/5b667baa661ed76330306e84f606cac2468da815\r\n\r\nNow, Telnet on the second gateway will open during the standard procedure for retrieving gateway information. This occurs either simply when retrieving information as part of a cloud integration, or during the process of adding a gateway to the integration.\r\n\r\nThe documentation still needs to be updated."
+        },
+        {
+          "url": "https://github.com/AlexxIT/XiaomiGateway3/pull/1781#issuecomment-6192590873",
+          "author": "AlexxIT",
+          "body": "https://github.com/AlexxIT/XiaomiGateway3/releases/tag/v4.3.0"
+        }
+      ]
+    },
+    {
+      "number": 1761,
+      "title": "fix(agent): make chained gestures responsive and action-paced",
+      "html_url": "https://github.com/AprilNEA/OpenLogi/pull/1761",
+      "state": "open",
+      "updated_at": "2026-10-20T13:53:36Z",
+      "repo": "AprilNEA/OpenLogi",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/AprilNEA/OpenLogi/pull/1761#issuecomment-6160943599",
+          "author": "oliver-mee",
+          "body": "Rebased onto `3e52db1a64a5` on `master`. The conflict resolution keeps both gesture timing policies across reconnects and upstream's thumbwheel rotation reset. The new upstream thumbwheel fixture now passes its capture policies to the updated constructor.\n\nValidated with Rust 1.99.0: workspace formatting and Clippy, workspace tests (2,230 passed, four ignored), documentation with warnings denied, ast-grep guards, and the portable-crate WASM checks all pass. This is local macOS and WASM validation, not a claim that the upstream Windows/Linux matrix has finished.\n\nThe updated head is `b58806f6`.\n"
+        },
+        {
+          "url": "https://github.com/AprilNEA/OpenLogi/pull/1761#issuecomment-6291829919",
+          "author": "oliver-mee",
+          "body": "@greptileai please review the latest head, `371ed2bebc58cc047b0ae4627b10359115fa8819`, again. A fresh pass over recognition, repeat pacing, direction changes and held-output cleanup would be helpful. Thanks!\n"
+        }
+      ]
+    },
+    {
+      "number": 5986,
+      "title": "fix(codex-plugin): keep pre-upgrade sessions' hooks working",
+      "html_url": "https://github.com/volcengine/OpenViking/pull/5986",
+      "state": "open",
+      "updated_at": "2026-10-14T02:39:40Z",
+      "repo": "volcengine/OpenViking",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": []
+    },
+    {
+      "number": 1743,
+      "title": "feat: add native and shortcut thumb-wheel zoom",
+      "html_url": "https://github.com/AprilNEA/OpenLogi/pull/1743",
+      "state": "open",
+      "updated_at": "2026-10-20T16:22:45Z",
+      "repo": "AprilNEA/OpenLogi",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/AprilNEA/OpenLogi/pull/1743#issuecomment-6295230152",
+          "author": "oliver-mee",
+          "body": "Updated this branch against master at ef6428f72a35 (0.8.15), keeping upstream held-wheel handling, session handoff and Hyprland dispatch alongside native zoom. Current head: 522bf1a1.\n\nThe full local gate passes: 2,927 tests passed, four ignored, plus formatting, Clippy, rustdoc, structural guards, portable WASM checks and Windows/Linux cross-Clippy. This refreshed head still needs hardware retesting.\n"
+        }
+      ]
+    },
+    {
+      "number": 26154,
+      "title": "fix(browser): explain unreadable and family-preserved cookie skips",
+      "html_url": "https://github.com/stablyai/orca/pull/26154",
+      "state": "closed",
+      "updated_at": "2026-10-14T01:25:10Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/pull/26154#issuecomment-6034577592",
+          "author": "oliver-mee",
+          "body": "@coderabbitai review"
+        },
+        {
+          "url": "https://github.com/stablyai/orca/pull/26154#issuecomment-6034691720",
+          "author": "oliver-mee",
+          "body": "@coderabbitai full review"
+        },
+        {
+          "url": "https://github.com/stablyai/orca/pull/26154#issuecomment-6158793653",
+          "author": "nwparker",
+          "body": "Superseded by merged PR #28269 after fresh synthetic import and rendered warning verification in all six locales, with passing CI. Your contribution is credited in the merged commit through its Co-authored-by footer."
+        }
+      ]
+    },
+    {
+      "number": 26139,
+      "title": "fix(browser): enable offscreen painting for headless pages",
+      "html_url": "https://github.com/stablyai/orca/pull/26139",
+      "state": "open",
+      "updated_at": "2026-10-20T06:25:53Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/pull/26139#issuecomment-6034335899",
+          "author": "oliver-mee",
+          "body": "Thanks for the pixel-test suggestion. Added a real Electron regression in d3ad5714. It bundles the actual backend, creates a hidden page with synthetic red/cyan content, captures it through CDP and checks substantial red and cyan pixel areas, dimensions and cleanup. Only profile metadata and guest registration are fixture substitutes; BrowserWindow, rendering and capture are real.\n\nIt passes on macOS and Linux ARM64. Disabling the preference makes the Linux control fail at the fixture deadline. All 30 focused tests, lint and Node typecheck pass on the contribution checkout. This adds current-backend coverage rather than relying only on the earlier application screenshots.\n"
+        },
+        {
+          "url": "https://github.com/stablyai/orca/pull/26139#issuecomment-6159664720",
+          "author": "oliver-mee",
+          "body": "The three workflows for the current head, bc6df3e5, have no jobs and explicitly say they are awaiting maintainer approval. For example: https://github.com/stablyai/orca/actions/runs/37597302995\n\nCould a maintainer approve the workflows on this existing PR? The real Electron regression and focused checks are recorded above; the full upstream matrix has not run. No replacement PR is needed to address the approval gate.\n"
+        }
+      ]
+    },
+    {
+      "number": 26070,
+      "title": "fix(browser): reject ambiguous unscoped keypress targets",
+      "html_url": "https://github.com/stablyai/orca/pull/26070",
+      "state": "closed",
+      "updated_at": "2026-10-14T00:17:29Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/pull/26070#issuecomment-6033421155",
+          "author": "oliver-mee",
+          "body": "Thanks for the worktree-only test suggestion. Added it in 11dd222d: a keypress with a worktree but no page reaches only that worktree\u2019s page, even while another page is globally active. The test also checks that the helper is not invoked. Added a short docstring to the fixture builder for the coverage warning. All 20 keypress tests, focused lint and Node typecheck pass."
+        },
+        {
+          "url": "https://github.com/stablyai/orca/pull/26070#issuecomment-6157980297",
+          "author": "nwparker",
+          "body": "Superseded by merged PR #28221. The fix is now on main, and your contribution is credited in the merged commit through its Co-authored-by footer."
+        }
+      ]
+    },
+    {
+      "number": 5497,
+      "title": "fix(opencode-plugin): only commit sessions with new messages at cleanup",
+      "html_url": "https://github.com/volcengine/OpenViking/pull/5497",
+      "state": "open",
+      "updated_at": "2026-10-16T02:41:52Z",
+      "repo": "volcengine/OpenViking",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/volcengine/OpenViking/pull/5497#issuecomment-5923913839",
+          "author": "ZaynJarvis",
+          "body": "there's a config in server side, where you can configure auto-commit on server, that applies to all agents.\r\n\r\nI think thats the easier way, and no extra code in plugin side."
+        },
+        {
+          "url": "https://github.com/volcengine/OpenViking/pull/5497#issuecomment-5923931826",
+          "author": "ZaynJarvis",
+          "body": "To make my previous comment precise, current `main` can centralize this in the server's `ov.conf`:\n\n```json\n{\n  \"memory\": {\n    \"session_auto_commit\": {\n      \"enabled\": true,\n      \"check_interval_seconds\": 60.0,\n      \"scan_rate_limit_files_per_second\": 2.0\n    }\n  },\n  \"server\": {\n    \"user_config_defaults\": {\n      \"auto_commit_policy\": {\n        \"pending_token_threshold\": 0,\n        \"message_count_threshold\": 0,\n        \"idle_timeout_seconds\": 600,\n        \"keep_recent_count\": 0,\n        \"min_commit_interval_seconds\": 0\n      }\n    }\n  }\n}\n```\n\n`memory.session_auto_commit.enabled` starts the server-side idle scheduler. `server.user_config_defaults.auto_commit_policy` gives newly created sessions that do not provide an explicit policy a 600-second idle timeout; the two threshold values are `0` here so this policy uses idle commit only. Idle commits archive the full backlog and ignore `keep_recent_count`.\n\nTwo caveats:\n\n- This default applies to newly created sessions. Existing sessions that already have `auto_commit_policy: null` need to be recreated or updated through `PATCH /api/v1/sessions/{session_id}/config`.\n- The actual commit can happen up to roughly one scan interval after the 600-second timeout, hence the 60-second scan interval above.\n\nSo for deployments where we control server config, I still prefer this centralized path over adding another OpenCode-only timer/config. The plugin-side fallback is only needed if OpenCode must support servers where this is not enabled or cannot be configured."
+        },
+        {
+          "url": "https://github.com/volcengine/OpenViking/pull/5497#issuecomment-5934674829",
+          "author": "oliver-mee",
+          "body": "Thanks @ZaynJarvis, that's the cleaner route. We've turned on `session_auto_commit` with a 600 second idle policy on our server and it does the job: a fresh OpenCode session committed about 11 minutes after its last message, with no plugin timer.\n\nOne note for anyone on the 0.4.22 release: there the switch is still `memory.session_auto_commit.idle_enabled`, not `enabled`.\n\nI've cut this PR down to the cleanup fix. Cleanup now commits only sessions with new messages since their last commit, and the commit log line shows `status` and `archived`. I've also rebased on `main` and bumped the plugin version for the version check.\n"
+        },
+        {
+          "url": "https://github.com/volcengine/OpenViking/pull/5497#issuecomment-5976226456",
+          "author": "oliver-mee",
+          "body": "Thanks @ktz03, good catch on both. Cleanup now tracks a commit watermark taken when the commit is sent instead of comparing wall-clock times, so a slow response can't mark later messages clean. Added both cases as regression tests in 5a4289f."
+        },
+        {
+          "url": "https://github.com/volcengine/OpenViking/pull/5497#issuecomment-6160817481",
+          "author": "oliver-mee",
+          "body": "Rebased onto `b8ec9d8210ab` on current `main`. The cleanup guard now sits inside upstream's serialized flush chain, and commits retain upstream's `keep_recent_count: 0` behavior. The commit watermark and its regression tests are preserved.\n\nUpdated the blocked-commit test to release the response before awaiting the queued flush, so it no longer depends on a request timeout. All 56 plugin tests pass, syntax checks pass, and the plugin-version gate passes with 0.5.14 to 0.5.15.\n\nThe old failed check was a version-bump failure on an earlier head. Could a maintainer approve the workflows for the new head, `de41f0816`? Upstream CI is not yet verified on this update.\n"
+        },
+        {
+          "url": "https://github.com/volcengine/OpenViking/pull/5497#issuecomment-6206836124",
+          "author": "ZaynJarvis",
+          "body": "Please rebase onto main: #5936 (60629f9) and #5935 (a0c3574) changed `examples/opencode-plugin/lib/memory-session.mjs` and its tests (pruning fully-captured sessions and dropping the local mapping when the server no longer has the session), so this PR now conflicts there and in `package.json` (main is at opencode 0.5.17). When resolving, keep the cleanup commit watermark working with the new pruning path, and bump opencode to 0.5.18."
+        }
+      ]
+    },
+    {
+      "number": 5496,
+      "title": "fix(opencode-plugin): stop the v2 prompt hook from holding the send on recall",
+      "html_url": "https://github.com/volcengine/OpenViking/pull/5496",
+      "state": "open",
+      "updated_at": "2026-10-09T09:02:10Z",
+      "repo": "volcengine/OpenViking",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": []
+    },
+    {
+      "number": 14374,
+      "title": "fix(ui): serve a fixed-colour favicon URL per colour scheme",
+      "html_url": "https://github.com/paperclipai/paperclip/pull/14374",
+      "state": "open",
+      "updated_at": "2026-10-06T03:13:24Z",
+      "repo": "paperclipai/paperclip",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/paperclipai/paperclip/pull/14374#issuecomment-5868807450",
+          "author": "divyeshpcodezee-tech",
+          "body": "@oliver-mee\r\n\r\nplease merge this PR"
+        }
+      ]
+    },
+    {
+      "number": 22772,
+      "title": "fix(updater): stop promising a manual update enables remote updates",
+      "html_url": "https://github.com/stablyai/orca/pull/22772",
+      "state": "closed",
+      "updated_at": "2026-10-11T12:58:00Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/pull/22772#issuecomment-6109264667",
+          "author": "OrcaWin",
+          "body": "Thank you @oliver-mee! CI never started on the fork (its runs sat queued), so I landed your change unchanged, with your authorship kept, through a copy rebased on main: #27464 (merged as eade6da6ff). The misleading \"update this server manually once\" text is gone."
+        }
+      ]
+    },
+    {
+      "number": 13929,
+      "title": "fix(workspaces): honor intentional non-git project paths",
+      "html_url": "https://github.com/paperclipai/paperclip/pull/13929",
+      "state": "open",
+      "updated_at": "2026-10-04T03:49:23Z",
+      "repo": "paperclipai/paperclip",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/paperclipai/paperclip/pull/13929#issuecomment-5827118674",
+          "author": "oliver-mee",
+          "body": "Rebased onto current `master` (now at `efce9356`, \"fix(ui): offer recovery when the app fails before React starts\", #13970). The commits replayed cleanly with no logic changes. The `General tests (chat 1/3)` and `verify` failures from the previous run came from the stale base and pass on this head.\n"
+        }
+      ]
+    },
+    {
+      "number": 13928,
+      "title": "fix(cli): stage git-ref installs the way release.sh stages packages",
+      "html_url": "https://github.com/paperclipai/paperclip/pull/13928",
+      "state": "open",
+      "updated_at": "2026-10-04T03:49:37Z",
+      "repo": "paperclipai/paperclip",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/paperclipai/paperclip/pull/13928#issuecomment-5827118374",
+          "author": "oliver-mee",
+          "body": "Rebased onto current `master` (now at `efce9356`, \"fix(ui): offer recovery when the app fails before React starts\", #13970). The commits replayed cleanly with no logic changes. The `General tests (chat 1/3)` and `verify` failures from the previous run came from the stale base and pass on this head.\n"
+        }
+      ]
+    },
+    {
+      "number": 13925,
+      "title": "test: dashboard summary consistency regression",
+      "html_url": "https://github.com/paperclipai/paperclip/pull/13925",
+      "state": "open",
+      "updated_at": "2026-09-25T05:14:51Z",
+      "repo": "paperclipai/paperclip",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/paperclipai/paperclip/pull/13925#issuecomment-5827118078",
+          "author": "oliver-mee",
+          "body": "Rebased onto current `master` (now at `efce9356`, \"fix(ui): offer recovery when the app fails before React starts\", #13970). The commits replayed cleanly with no logic changes. The `General tests (chat 1/3)` and `verify` failures from the previous run came from the stale base and pass on this head.\n"
+        }
+      ]
+    },
+    {
+      "number": 7977,
+      "title": "fix(alibaba-token-plan): use the documented Token Plan base URLs",
+      "html_url": "https://github.com/anomalyco/models.dev/pull/7977",
+      "state": "open",
+      "updated_at": "2026-09-24T03:47:32Z",
+      "repo": "anomalyco/models.dev",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": []
+    },
+    {
+      "number": 1580,
+      "title": "fix(codex): use persistent CLI for MCP server",
+      "html_url": "https://github.com/basicmachines-co/basic-memory/pull/1580",
+      "state": "closed",
+      "updated_at": "2026-09-29T15:04:34Z",
+      "repo": "basicmachines-co/basic-memory",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/basicmachines-co/basic-memory/pull/1580#issuecomment-5725600834",
+          "author": "CLAassistant",
+          "body": "[![CLA assistant check](https://cla-assistant.io/pull/badge/signed)](https://cla-assistant.io/basicmachines-co/basic-memory?pullRequest=1580) <br/>All committers have signed the CLA."
+        },
+        {
+          "url": "https://github.com/basicmachines-co/basic-memory/pull/1580#issuecomment-5892923945",
+          "author": "phernandez",
+          "body": "Thanks for the report and the patch.\n\nWe're going to keep the `uvx` launcher. A running MCP server imports from the environment it started in; removing uv's cache while the server runs is the same as deleting a virtualenv out from under a running Python process, and any Python tool breaks that way. Switching to a separately installed `basic-memory` executable doesn't remove that dependency, it moves it to a different environment, and it adds an install step `uvx` exists to avoid.\n\nIf the cache is being cleared by something other than a manual `uv cache clean` during a session, for example a tool or OS cleanup job, please open an issue with the details and we'll look at how to document or guard against it."
+        }
+      ]
+    },
+    {
+      "number": 21120,
+      "title": "fix(linux): repair disabled session bus in daemon and PTY environments",
+      "html_url": "https://github.com/stablyai/orca/pull/21120",
+      "state": "closed",
+      "updated_at": "2026-10-18T13:39:35Z",
+      "repo": "stablyai/orca",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/pull/21120#issuecomment-5813103927",
+          "author": "oliver-mee",
+          "body": "Rebased onto current `main` (now at `122b8c25d`, \"fix(terminal): let Linux IMEs keep the candidate key for a preedit they own (#22607)\") to clear the conflict.\n\nThe branch was rebuilt on the new base rather than replayed, so the commit SHAs changed and the four commits are now two. #19430 moved the daemon launch out of `daemon-launched-child.ts` into `daemon-launched-child-spawn.ts`, so the repair now sits on `daemonEnv` there, in the new structure. That env feeds both the direct fork and the new `systemd-run --user --scope` arm. `spawn-environment.ts` was hand-applied on top of the #19512 changes. No logic changes to the repair itself.\n\nOne thing worth flagging from the rebase: with the marker left in place, `systemd-run --user` itself fails. On a systemd 255 host, `DBUS_SESSION_BUS_ADDRESS=disabled: systemd-run --user --scope --collect true` exits 1 with \"Failed to connect to bus: Connection refused\", while the same command without the variable works. So under headless serve the durable-scope launch from #19430 falls back to the unscoped path. The legacy migration and the scope death watch already clear this variable, but `buildDurableDaemonScopeCommand` does not. Because this PR repairs `daemonEnv` before it reaches that builder, it covers that arm too.\n\nValidated locally: the related suites pass (`dbus-session-bus-env`, `daemon-launched-child-spawn`, `daemon-launched-child-identity`, `daemon-cgroup-scope`, 37 tests), the node typecheck is clean, and oxlint is clean on the changed files. Mergeable again.\n"
+        },
+        {
+          "url": "https://github.com/stablyai/orca/pull/21120#issuecomment-5861989608",
+          "author": "oliver-mee",
+          "body": "Rebased onto current `main` at `0b2dd0a99b` (v1.4.214-122-g0b2dd0a99b, \"fix(runtime): let the phone end a terminal stream by the request that opened it (#23006)\") to clear the new conflicts.\n\nTwo conflicts, both from changes that landed next to ours:\n\n- `local-pty-spawn-environment.ts`: #22717 added `stripPiProcessOwnerEnv`. Both imports and both calls are kept, with the bus repair still running after the AppImage env cleanup.\n- `pty-subprocess/spawn-environment.ts`: `main` now has its own docstring on `createDaemonPtyEnvironment`, so I kept that one and dropped the docstring this branch had added. The Windows test-guard commit now only touches tests.\n\nThe import in `dbus-session-bus-env.ts` is also reformatted to match the current oxfmt config.\n\nChecks after the rebase, on Linux arm64:\n\n- The four session-bus suites pass: `dbus-session-bus-env`, `dbus-session-bus-env-wiring`, `daemon-launched-child-spawn` and `daemon-cgroup-scope`.\n- Across `src/main/{daemon,providers,pty}`, the branch fails the same 14 files as a clean `main` checkout on this host (native `node-pty` and Windows-only suites, since deps were installed with `--ignore-scripts`). There are no new failures, and the branch adds 12 passing tests.\n- `typecheck:node`, oxlint and `oxfmt --check` are clean on the changed files.\n\nStill reproduces on v1.4.215 headless `serve`. Shells spawned by the runtime inherit `DBUS_SESSION_BUS_ADDRESS=disabled:`, and at startup the daemon logs `durable cgroup-scope launch failed, retrying without cgroup isolation` after `Failed to connect to bus: Connection refused`. That is the `systemd-run --user --scope` path this PR also repairs. A full end-to-end `serve` run from a build of this branch is still not done.\n"
+        },
+        {
+          "url": "https://github.com/stablyai/orca/pull/21120#issuecomment-6250588818",
+          "author": "oliver-mee",
+          "body": "Closing as superseded by #26306, whose session-bus fix was incorporated into #26483. Issue #21119 is already closed as completed. That implementation removes Chromium's exact disabled marker at daemon and PTY boundaries, so rebasing this older alternative would duplicate the landed fix."
+        }
+      ]
+    },
+    {
+      "number": 2656,
+      "title": "feat(base): add +field-group-create shortcut",
+      "html_url": "https://github.com/larksuite/cli/pull/2656",
+      "state": "open",
+      "updated_at": "2026-10-14T02:39:37Z",
+      "repo": "larksuite/cli",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/larksuite/cli/pull/2656#issuecomment-5581565999",
+          "author": "CLAassistant",
+          "body": "[![CLA assistant check](https://cla-assistant.io/pull/badge/signed)](https://cla-assistant.io/larksuite/cli?pullRequest=2656) <br/>All committers have signed the CLA."
+        },
+        {
+          "url": "https://github.com/larksuite/cli/pull/2656#issuecomment-6159665286",
+          "author": "oliver-mee",
+          "body": "The failed CI, preview, skill-format and comment-audit runs did not execute jobs. Their annotations say the required approval expired. For example: https://github.com/larksuite/cli/actions/runs/34219013316\n\nCould a maintainer approve a fresh run for the current head, 09b546b6? This is an approval failure, not a failed feature test. The separate Semantic Review errors on older heads are a stale-run resolution problem, which I am preparing a focused fix for.\n"
+        }
+      ]
+    },
+    {
+      "number": 101222,
+      "title": "fix(providers): keep Token Plan Team editions in the Qwen picker group",
+      "html_url": "https://github.com/NousResearch/hermes-agent/pull/101222",
+      "state": "open",
+      "updated_at": "2026-09-25T05:06:43Z",
+      "repo": "NousResearch/hermes-agent",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/101222#issuecomment-5509183502",
+          "author": "Enough1122",
+          "body": "> AI code review \u2014 automated review for reference; please use your judgment.\n\n**101222 \u2014 fix(providers): keep Token Plan Team editions in the Qwen picker group \u2014 LGTM**\n\nDiff is 2 files, 19 LOC. Root cause is accurate: standalone Token Plan provider plugin registers `alibaba-token-plan-team` / `alibaba-token-plan-cn-team` which were missing from `PROVIDER_GROUPS[\"qwen\"]` membership (`hermes_cli/models.py:1400`), so `group_providers` left them as top-level singles while Personal editions folded under `Qwen`.\n\n* `hermes_cli/models.py:1409` \u2014 adds both Team slugs adjacent to their Personal counterpart, preserving regional pairing. No ordering dependency, but grouping adjacency matches `group_providers` input order.\n* `tests/hermes_cli/test_provider_groups.py:22` \u2014 `test_token_plan_tiers_share_one_group_row` pins both Personal+Team presence, filters `alibaba-token-plan*` subset, asserts exactly one `qwen` group row and each slug emitted once (`emitted.count == 1`). Catches future leak if a third tier is added without grouping.\n* Duplication guard (`_slugs(rows)` count) prevents double-emit if `qwen-oauth` or other qwen member collides.\n\nNo behavior change when plugin absent \u2014 members are allowed absent IDs. Non-blocking: none.\n\n**Verdict: LGTM**\n"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/101222#issuecomment-5827114288",
+          "author": "oliver-mee",
+          "body": "Rebuilt on current `main` (now at `69948c0057`, \"fix(desktop): log what ssh did when an SSH connect fails\"). `PROVIDER_GROUPS` has moved from `hermes_cli/models.py` to `hermes_cli/models_catalog_static.py` since this was opened, so I applied the same two-slug change there instead of replaying the old commits. The test now uses the new imports. Same change, one commit, and I've updated the PR body to name the new file.\n\n`pytest tests/hermes_cli/test_provider_groups.py` gives 3 passed. With the catalog change reverted, the new test fails as it should.\n"
+        }
+      ]
+    },
+    {
+      "number": 96895,
+      "title": "fix(desktop): keep primary SSH session resumes remote",
+      "html_url": "https://github.com/NousResearch/hermes-agent/pull/96895",
+      "state": "closed",
+      "updated_at": "2026-09-25T04:55:02Z",
+      "repo": "NousResearch/hermes-agent",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/96895#issuecomment-5452717615",
+          "author": "Enough1122",
+          "body": "> AI code review \u2014 automated review for reference; please use your judgment.\n\n**fix(desktop): keep primary SSH session resumes remote**\n\n1. `apps/desktop/src/app/contrib/wiring.tsx:997` (`onResumeSession` \u2192 `sessionOwnerRouteFromRow`/`forgetSessionOwnerHintsForSession`) \u2014 Correctly pins the row's own `(connection,profile)` before `openSession`/`navigate` so a click on a row previewing profile A no longer races the `*` cache and dials profile B via the first cached row. Untagged rows (legacy primary-SSH, single-profile) now call `forgetSessionOwnerHintsForSession` + bare `requestSessionResume(sessionId)` to clear stale explicit hints \u2014 older builds that persisted those rows as `local` previously forced a remote session onto the Mac backend (\"session not found\"). Good.\n\n2. `apps/desktop/src/store/session.ts:867` (`forgetSessionOwnerHintsForSession`, `sessionOwnerRouteFromRow`) \u2014 `forget...ForSession` iterates `sessionOwnerHints` by `entry.id` and persists only on change; `sessionOwnerRouteFromRow` returns `undefined` for untagged (no `connection_id` or no `profile`), keeping primary-SSH rows ambient as intended. The `trim()` guards handle blank strings.\n\n3. Tests `apps/desktop/src/store/session.test.ts:75` \u2014 `forgets every route for one session without disturbing other sessions` + hydration round-trip + `pins only connection-tagged rows` cover the poisoned vs healthy isolation and the untagged \u2192 undefined contract.\n\nNo blocker. The ambient/id-only fallback matches `apps/desktop/AGENTS.md` resume semantics.\n\n_(Comment drafted and posted by Hermes Agent, an AI assistant acting on behalf of @Enough1122.)_\n"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/96895#issuecomment-5826977195",
+          "author": "oliver-mee",
+          "body": "Closing this, since #99672 landed the same change on `main` (cherry-picked from this branch, with authorship kept). Thanks for carrying it over."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "fix(registry): publish every registry item to the served path",
+      "html_url": "https://github.com/Subhan-code/Amicro--Micro-transitions-/pull/9",
+      "state": "closed",
+      "updated_at": "2026-09-30T07:56:41Z",
+      "repo": "Subhan-code/Amicro--Micro-transitions-",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/Subhan-code/Amicro--Micro-transitions-/pull/9#issuecomment-5906779291",
+          "author": "oliver-mee",
+          "body": "Closing this since the registry fix landed on main. Thanks for sorting it!"
+        }
+      ]
+    },
+    {
+      "number": 86160,
+      "title": "fix(doctor): validate model-provider plugins through the providers registry",
+      "html_url": "https://github.com/NousResearch/hermes-agent/pull/86160",
+      "state": "closed",
+      "updated_at": "2026-09-20T21:30:18Z",
+      "repo": "NousResearch/hermes-agent",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/86160#issuecomment-5307367786",
+          "author": "Enough1122",
+          "body": "> AI code review \u2014 automated review for reference, author can ignore or act on any point.\n\n**fix(doctor): validate model-provider plugins through the providers registry**\n\n1. The recording wrapper works because the plugin module binds `register_provider` while the patch is active \u2014 good. But the validation only observes *module-level* calls; a plugin that registers lazily (inside a function/CLI entry point) is reported as \"registered no ProviderProfile\" even though it may work at runtime. Since the model-provider contract does require module-level registration, make the error message state that explicitly (\"must call providers.register_provider(...) at module level\") so plugin authors are not misled.\n2. The `finally` block restores `_REGISTRY`/`_ALIASES` from the pre-run snapshot. If the plugin's import chain triggers `_discover_providers()` (e.g. a plugin calls `list_providers()`), bundled providers discovered mid-import are wiped by the restore. Discovery is idempotent so the next `list_providers()` re-populates, but the in-process registry briefly diverges from what other modules may hold; consider restoring only entries that existed before (additive restore) rather than clear+replace.\n3. `providers_module._PROVIDER_LIST_CACHE` is snapshotted by direct attribute access \u2014 if the attribute name or shape ever changes in `providers/__init__.py`, doctor crashes instead of degrading gracefully. A `getattr` with a fallback would keep the doctor resilient to internal provider-module refactors.\n4. Test coverage is solid (accepts, rejects-nothing, warns-on-declared-tools, restores registry). One gap: no test for a `kind: model-provider` plugin that actually registers tools/hooks at module level (the warning path is only exercised via the `provides_tools` manifest declaration, not real registration).\n"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/86160#issuecomment-5752110792",
+          "author": "teknium1",
+          "body": "@oliver-mee you had this right first \u2014 `doctor` was pushing `kind: model-provider` plugins through `_load_plugin` and failing every valid one on the missing `register(ctx)`. #117451 lands the same fix (imports through `providers._import_plugin_dir`, the real discovery loader, then restores the registry) with you credited as co-author on that commit. Once it merges I'll close this as superseded with the SHA.\n"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/86160#issuecomment-5752798151",
+          "author": "teknium1",
+          "body": "Landed in #117451 (118984d7a02f8a8baec11255002cbbab7c202e06): `hermes plugins doctor` now loads `kind: model-provider` plugins through providers discovery and reports the registered profiles; you are co-author on that commit. Closing as superseded \u2014 thanks @oliver-mee for finding it first.\n"
+        }
+      ]
+    },
+    {
+      "number": 85851,
+      "title": "fix(desktop): keep vendor casing in model display names",
+      "html_url": "https://github.com/NousResearch/hermes-agent/pull/85851",
+      "state": "closed",
+      "updated_at": "2026-09-24T22:46:55Z",
+      "repo": "NousResearch/hermes-agent",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/85851#issuecomment-5290416122",
+          "author": "PRATHAMESH75",
+          "body": "<!-- hermes-autotriage -->\n<!-- action=reviewed-pr pr=85851 issue=85849 verdict=fixes at=2026-08-14T07:45Z -->\n\nReviewed against #85849 \u2014 this resolves the reported mis-casing at the right layer (`prettifyBase` in `model-status-label.ts`).\n\n**Approach is sound.** Restoring vendor casing *after* title-casing (a `VENDOR_CASING` allow-list + a `PARAMETER_COUNT` regex) keeps the pipeline a single normalized pass and cleanly covers the issue's top wrong-token table: `Deepseek\u2192DeepSeek`, `Glm\u2192GLM`, `Minimax\u2192MiniMax`, `Openai\u2192OpenAI`, `Mimo\u2192MiMo`, plus `8b\u21928B` / `a3b\u2192A3B` via `/\\b(a?)(\\d+(?:\\.\\d+)?)b\\b/gi`. Good catch also fixing the `gemini-` branch, which was the one path that returned before any capitalisation (`gemini-2.5-pro` \u2192 \"Gemini 2.5 pro\"); it now title-cases like the others. Test coverage in both `model-status-label.test.ts` and `model-menu-panel.test.tsx` matches the issue's examples, and checks are green.\n\n**Residuals (non-blocking), for awareness:**\n- `VENDOR_CASING` is a curated allow-list, so the long tail from the issue's 1093-casing-diff analysis (vendors beyond the ~11 mapped) still title-cases and will need map additions over time. That's a fine, maintainable scope for the frequent cases \u2014 just noting it won't be exhaustive.\n- `/\\bIt\\b/\u2192IT` and `/\\bAi\\b/\u2192AI` are broad word-level rules. They're aimed at the `-it` (instruction-tuned) and `-ai` suffixes and are low-risk since model ids rarely carry the English words \"it\"/\"ai\" as standalone tokens, but a vendor/model literally named \"Ai\"/\"It\" would be upper-cased. Acceptable given the token frequency, worth a glance if a future model id trips it.\n\nReads correct and well-covered to me for #85849.\n"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/85851#issuecomment-5307395370",
+          "author": "Enough1122",
+          "body": "> AI code review \u2014 automated review for reference, author can ignore or act on any point.\n\n**fix(desktop): keep vendor casing in model display names**\n\nRestoring vendor casing after title-casing is a clean single-pass design, and fixing the `gemini-` branch (the one path that skipped title-casing) is a good catch. Tests cover the issue's examples. A few observations:\n\n1. `apps/desktop/src/lib/model-status-label.ts:164-167` \u2014 `/\\bIt\\b/ \u2192 'IT'` and `/\\bAi\\b/ \u2192 'AI'` are broad word-level rules. They're aimed at `-it`/`-ai` suffix tokens and are low-risk today, but any future model id carrying the standalone English words \"it\"/\"ai\" (or a vendor literally named \"Ai\") would be upper-cased. Consider anchoring these to suffix position (e.g. `\\bit\\b$` after the variant strip) if a collision ever appears.\n2. `model-status-label.ts:172` \u2014 `PARAMETER_COUNT` runs with the `i` flag after title-casing, so already-cased tokens like \"32B\" are re-matched and re-written identically (harmless). Worth noting the `a?` prefix also matches a bare leading \"a\" \u2014 no current id trips it, but a hypothetical \"3ab\"-style token would produce \"3AB\". Very low risk.\n3. `VENDOR_CASING` is a curated allow-list, so the long tail of vendors (the issue's 1093-casing-diff analysis) will keep title-casing and need map additions over time. Fine scope for the frequent cases, just noting it won't be exhaustive \u2014 a follow-up could generate the map from the catalog's provider display names.\n"
+        },
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/pull/85851#issuecomment-5823482310",
+          "author": "OutThisLife",
+          "body": "Superseded by #121996 \u2014 the cluster fix lands the same approach with the missing bug-class tests and, where noted in that PR, a canonicalization/reconcile fix the candidates missed. Your diagnosis and code are credited there (Co-authored-by / cherry-pick). Thanks for the report and the patch."
+        }
+      ]
+    },
+    {
+      "number": 118726,
+      "title": "fix(qwen): restore the Token Plan catalog to the gateway-served set",
+      "html_url": "https://github.com/openclaw/openclaw/pull/118726",
+      "state": "closed",
+      "updated_at": "2026-10-20T08:14:53Z",
+      "repo": "openclaw/openclaw",
+      "kind": "pr",
+      "merged_at": null,
+      "draft": false,
+      "discussion": [
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-5173393856",
+          "author": "oliver-mee",
+          "body": "Added runtime proof to the PR body: this branch built, its CLI listing all fourteen restored rows with `qwen3-coder-next` gone, and a completion running end to end through `qwen-token-plan/deepseek-v4-pro`, which is a row this PR restores and which cannot be selected on current `main` at all. The built binary reports `2026.7.2 (6f2bcad)` so it is verifiably this branch.\n\nOn the remaining finding, that the restore reinstates ceilings #113579 corrects: that is true, and it is deliberate rather than an oversight. This PR is a faithful revert, so every ceiling in it is one `main` itself shipped before the curation. Nothing here is more stale than what users have today, and keeping it a pure revert is what makes the diff reviewable as one decision. #113579 then rebases on top and corrects the three ceilings with boundary-probe evidence.\n\nThat said, the review is right that the two should not land as contradictory catalog states, and I would rather solve the shape than argue about it.\n\n@steipete, this is really a question for you, because there are three open PRs against the same catalog and the sensible grouping depends on what you want to own:\n\n1. **#118726 (this one)** restores the catalog to the published fourteen.\n2. **#113579** corrects three output ceilings and adds video input, measured on the live gateway.\n3. **#113578** adds `qwen3.8-max-preview` with an always-thinking effort contract. This one is already at `proof: sufficient` and `ready for maintainer look`.\n\nI am happy to fold #113579 into this PR so the catalog lands correct in one change, which is what the review's own recommendation (\"restore every documented chat model with verified metadata\") points at. Say the word and I will do that and close #113579 as superseded.\n\nI would suggest keeping #113578 separate regardless. It carries a real code change to the thinking contract rather than catalog metadata, and it has already cleared contributor-side review; folding it in would drag a finished PR back into an open one.\n\nTwo things I would rather flag than quietly bundle:\n\n- The video modality in #113579 is where the outstanding China-region question actually attaches. If I fold that PR in, I would suggest taking the three `max_tokens` corrections and leaving video for a follow-up, so an unresolved regional argument cannot block ceilings that are proven by boundary probes.\n- The gateway now also serves `qwen3.8-max` and `deepseek-v4-flash-0731`, neither of which is in any catalog yet. Correcting myself from an earlier draft of this comment: I do have measured metadata for both. `deepseek-v4-flash-0731` is a dated snapshot of `deepseek-v4-flash` (0731 being 31 July), and `qwen3.8-max` is the GA of `qwen3.8-max-preview`, whose ceiling I have just reconfirmed on the GA id: `max_tokens=131072` accepted, `131073` rejected with `Range of max_tokens should be [1, 131072]`, identical to the preview. They stay out of this PR because it is a revert, not because the numbers are unknown. Happy to add them in a follow-up.\n\n"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-5185863274",
+          "author": "oliver-mee",
+          "body": "On the remaining finding, that this applies Global-only evidence to the China endpoint: here is China endpoint evidence.\n\nI listed both Token Plan endpoints today. They serve an identical catalogue:\n\n```console\n# Global, ap-southeast-1\n$ curl -s $GLOBAL_BASE/models -H \"Authorization: Bearer sk-sp-<redacted>\" | jq -r '.data[].id' | sort\n# 22 ids\n\n# China, cn-beijing\n$ curl -s $CN_BASE/models -H \"Authorization: Bearer sk-sp-<redacted>\" | jq -r '.data[].id' | sort\n# 22 ids, byte-identical to the Global list\n```\n\nConcretely, for this PR:\n\n- All fourteen restored models are present on the China endpoint. None is missing.\n- `qwen3-coder-next` is absent from China as well, so removing it is correct for both endpoints rather than only for Global.\n- The two lists are identical, so this branch advertises nothing to China users that the China endpoint does not serve.\n\nThat covers the model IDs, which is the part of the finding about advertising unsupported rows.\n\nOn the output ceilings I want to be precise about what is measurement and what is reasoning, because this PR has been held to a high evidence bar and I would rather not blur that line now.\n\nThe measurement is the identical catalogue above. The reasoning is that these are the same models: Token Plan is one product offered in two regions, the two endpoints serve the same twenty-two model IDs, and an output ceiling is a property of the model build rather than of the region it is served from. `kimi-k2.7-code` on cn-beijing is the same `kimi-k2.7-code` as on ap-southeast-1. There is no mechanism by which the same model would carry a different output cap on the other endpoint, and no vendor documentation describes one.\n\nI cannot turn that into a China completion transcript, and I would rather say so than imply otherwise: my China Token Plan subscription is lapsed. A lapsed subscription still lists the full catalogue but denies every completion, which is why I can show you the China model list above but not a China request. That is also worth knowing as a general trap on this service, since it means list length alone never proves entitlement.\n\nTwo things that limit the risk if you would still rather not take the inference:\n\n- **This PR does not widen the coupling.** `QWEN_TOKEN_PLAN_MODEL_CATALOG` has been one shared array since the provider landed; `buildQwenTokenPlanProvider` swaps only the base URL. The ceilings this branch corrects were themselves shared and were never China-proven either. Splitting the catalog by region is a reasonable design change, but it is a pre-existing design question rather than something this branch introduces.\n- **A wrong ceiling fails loudly, not silently.** The gateway rejects an over-limit request with `400 Range of max_tokens should be [1, N]`, naming the enforced range. It does not truncate or misbehave quietly.\n\nIf you would prefer the region split regardless, I am happy to do it: `resolveQwenTokenPlanBaseUrl` already selects the endpoint, so a per-region catalog is a contained change and I can send it as a follow-up. I would just rather not hold the restoration behind it, because today every China user is looking at the same six-row picker with a model that 404s on their endpoint too.\n"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-5190867140",
+          "author": "oliver-mee",
+          "body": "Folded two things into this PR and closed #113579 as superseded.\n\n`6b9da288` adds `video` input to the six Token Plan models that accept it, which was the last thing left in #113579 after its output ceilings landed here in `cdeae8e3`. It also drops \"(Team Edition)\" from the provider docs: Token Plan now has Personal and Team editions sharing one endpoint, so the label is wrong rather than just incomplete.\n\n`5e0c23a0` adds `deepseek-v4-flash-0731`, new on the gateway per Alibaba's 2026-08-01 changelog. Lightweight MoE, 284B total and 13B active, native 1M context. Worth noting it is served on both Personal and Team while the base `deepseek-v4-flash` is Team-only, so Personal keys gain a model they did not have.\n\nOn why these are arriving here rather than as separate PRs: Alibaba is changing this catalog faster than one PR per change can track, and splitting them was producing contradictory catalog states across open PRs, which is the thing the last review asked me to avoid. If you would rather I unpick any part of it into its own PR, say so and I will.\n\n**On the remaining China finding.** The narrowing is fair: identical model IDs on both endpoints do establish that the restored rows exist in China, but they do not establish the changed `max_tokens` values or the modality flags. I cannot close that gap. My China Token Plan subscription is lapsed, and a lapsed key lists the full catalog while refusing every completion, so I can enumerate China but cannot probe a boundary there.\n\nTwo things that bound the risk, neither of which is a substitute for the proof you asked for:\n\n- The shared catalog predates this PR. `QWEN_TOKEN_PLAN_MODEL_CATALOG` has been one array since the provider landed, and `buildQwenTokenPlanProvider` swaps only the base URL. The ceilings corrected here were shared and unproven for China before this PR too.\n- A wrong ceiling fails loudly. The gateway returns `400 Range of max_tokens should be [1, N]` naming the enforced range, rather than truncating silently.\n\nIf you want the region split instead, I am happy to build it: `resolveQwenTokenPlanBaseUrl` already selects the endpoint, so a per-region catalog is contained. I would just rather not hold the restoration behind it, because China users are currently looking at the same six-row picker with a model that 404s on their endpoint too.\n\nLocal validation: the provider suite is 79 passing across `provider-catalog.test.ts`, `index.test.ts` and `stream.test.ts`, and `shared-upstream-model.contract.test.ts` is 3 passing, which covers the new row's code-mode tier.\n"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-5190933653",
+          "author": "oliver-mee",
+          "body": "Correction to my previous comment: the video modality is out, reverted in `8a5abbcf`. CI caught something I had not known about.\n\n`test/scripts/publish-model-catalog.test.ts` fails on every row that declares video with `Invalid option: expected one of \"text\"|\"image\"|\"document\"`. The two schemas disagree:\n\n- `src/plugin-sdk/provider-catalog-shared.ts:48` types `input` as `\"text\" | \"image\" | \"audio\" | \"video\" | \"document\"`, which is why it typechecks and the extension tests pass.\n- `packages/model-catalog-core/src/remote-catalog-bundle.ts:49` narrows the published bundle to `[\"text\", \"image\", \"document\"]`, and that is what the publish script validates the manifest against.\n\nSo a video-capable model cannot declare it in a shipped catalog today, whatever the gateway does. Six Token Plan models do accept video input, but that is not expressible here, so it is dropped rather than worked around. Widening the bundle schema is a reasonable thing to want but it is not a catalog restore, and I would rather raise it separately than slip it into this PR. Happy to open that as its own issue if you would find it useful.\n\nWhat remains from #113579 is the `(Team Edition)` docs scrub, which stands: Personal and Team are separate editions sharing one endpoint, so the old label described the wrong axis.\n\nThe rest of the PR is unchanged: the restored 14 rows, the three corrected ceilings, and `deepseek-v4-flash-0731`. Local checks after the revert are 79 passing across the three provider test files, plus `publish-model-catalog.test.ts` 8 passing, which is the lane that failed.\n"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-5191030147",
+          "author": "oliver-mee",
+          "body": "Filed the schema question separately as #119587, so it does not ride along on this PR.\n\nShort version: `packages/model-catalog-core/src/remote-catalog-bundle.ts` allows only `text | image | document`, while the plugin SDK type allows `audio` and `video` too, so a video row typechecks and passes the extension tests before failing the publish lane. That file is new as of 2026-07-25 (#113601), and #97048 had previously established that dropping audio/video was a defect, so it looks like the narrower set reappeared on the newer hosted-catalog path.\n\nI have left open the possibility that the narrowing is deliberate. If it is, the useful fix is the opposite direction: reject those modalities where they are authored so the error lands in the owning extension's tests instead.\n\nNothing needed here. Video stays out of this PR either way.\n"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-5203843620",
+          "author": "oliver-mee",
+          "body": "Rebased onto current `main` (now at `f7f270555c`, \"test(compaction): provide post-compact usage evidence\", #119911) and refreshed the proof at the new head.\n\n**The history is collapsed rather than replayed, and that was deliberate.** `main` has since refactored this file: the catalogs are now built through `buildQwenCatalogModels` from tuple rows instead of object literals. Replaying five commits that each patch object literals would have meant fighting the same conflict once per commit, with every resolution able to quietly revert that refactor. So the branch was rebuilt on current `main` and the intended end state applied in one commit, expressed in the new tuple style. The SHAs changed as a result.\n\nThe upshot is a much smaller diff: `models.ts` is now `+11/-2` rather than `+76/-4`, because the refactor is kept and only the fifteen catalog rows differ.\n\nContents are unchanged from what was already reviewed here: the restored gateway-served set, the three corrected ceilings, `deepseek-v4-flash-0731`, and the `(Team Edition)` docs scrub. `qwen3-coder-next` stays in `QWEN_MODEL_CATALOG` where it belongs. Video input is still out, per #119587.\n\nRefreshed proof in the body, now taken at `1f37b7a`: the built CLI lists all fifteen rows and completes end to end through `deepseek-v4-flash-0731`, which is the row this PR adds, so one run covers both the restoration and the addition.\n\nLocal checks: the provider suite is 79 passing across `provider-catalog.test.ts`, `index.test.ts` and `stream.test.ts`; `publish-model-catalog.test.ts` is 8 passing; `shared-upstream-model.contract.test.ts` is 3 passing, which covers the new row's code-mode tier. Typecheck clean on the extension.\n\nThe China capability question from the last review is unchanged and I have not tried to argue it away: the ceilings are Global-measured, and my China subscription is lapsed, so I can enumerate that endpoint but cannot probe a boundary on it.\n"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-5827083749",
+          "author": "oliver-mee",
+          "body": "Rebased onto current `main` (now at `956cca8af6`, \"perf(sessions): reuse participant facts when publishing entry writes\", #157582). The one commit replayed cleanly, including over #156535's `modelsDev` additions to the Qwen manifest. No logic changes. The Qwen extension suites pass locally (8 files, 169 tests), and CI is re-running on the new head.\n"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-5827205557",
+          "author": "oliver-mee",
+          "body": "Pushed 2112efe2f3 to address the last review and the red CI run.\n\n- **DeepSeek output ceilings:** the five DeepSeek rows now use 384,000, the output limit the upstream DeepSeek entries carry, instead of 393,216. The Token Plan gateway does not validate `max_tokens` on these models (it accepted a request far above the context window), so there is no plan-specific ceiling to measure, and the catalogue value is the honest one.\n- **check-lint / check-docs:** both failed only on `oxfmt --check` for `docs/providers/qwen.md` (table separator and a missing blank line). Formatted, no content change.\n\nQwen extension suites pass locally (8 files, 169 tests) and `oxfmt --check` is clean on the touched files.\n"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-6161021654",
+          "author": "oliver-mee",
+          "body": "Rebased onto `eda41b03a1a0` on `main`, with updated head `9f6dc13917`.\n\nThe conflict resolution preserves upstream's runtime-owned onboarding behavior and live-discovery tests. Review caught the replace-mode test's old eight-row count; that now matches the restored 19-row catalog. All 55 Qwen extension tests pass in a secretless Linux ARM64 container on Node 26.11.1 and pnpm 12.9.0 (38.33 seconds for the final suite). Formatting checks and `git diff --check` pass.\n\nThe PR description now has the current base and evidence. No live provider requests or installed application changes were made during this rebase. The full upstream CI matrix is not yet verified on this head.\n"
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw/pull/118726#issuecomment-6286571166",
+          "author": "oliver-mee",
+          "body": "Closing this as superseded by the current catalogue/discovery architecture rather than rebasing the old restoration again.\n\nDirect Token Plan references retain their provider constraints (#113976), authenticated discovery is refreshable (#131294), and models.dev hydration (#137131) now supplies the useful missing metadata through the hosted catalogue. I checked the published v2 catalogue: it already includes the surviving DeepSeek, Kimi and GLM rows, including GLM 5.3 and DeepSeek V4.1 Flash 1017.\n\nThe small recommended picker is intentional. This old restoration would now reintroduce retired IDs and change that curation policy. Any remaining incorrect field or reproducible offline-resolution problem is better handled as a focused follow-up. Thanks for the reviews and the work that replaced this path."
+        }
+      ]
+    },
+    {
+      "number": 7448,
+      "title": "Shell integration tests can exhaust shared outer deadlines",
+      "html_url": "https://github.com/lidge-jun/opencodex/issues/7448",
+      "state": "open",
+      "updated_at": "2026-10-20T16:07:41Z",
+      "repo": "lidge-jun/opencodex",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 7438,
+      "title": "[Provider compatibility] Refresh dated Alibaba Token Plan catalogue and endpoints",
+      "html_url": "https://github.com/lidge-jun/opencodex/issues/7438",
+      "state": "open",
+      "updated_at": "2026-10-20T12:13:21Z",
+      "repo": "lidge-jun/opencodex",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/lidge-jun/opencodex/issues/7438#issuecomment-6290569686",
+          "author": "Ingwannu",
+          "body": "Checked against trusted dev `12025981e5a304cdb6b1b54f525ba8554f623977`. Linked implementation #7439 is under review. Keep dated-ID metadata, endpoint migration and Regional/Personal/Team evidence distinct. Its Global Personal receipt is not CN/Team inference or an exact output-limit measurement. Canonical destination changes require the documented primary-source admission review; liveModels/default-model/Responses pins and existing saved destinations must not drift as a side effect. No live discovery or provider call was made in this triage."
+        }
+      ]
+    },
+    {
+      "number": 31039,
+      "title": "[Bug]: Client-hosted browser toolbar has no session-profile selector",
+      "html_url": "https://github.com/stablyai/orca/issues/31039",
+      "state": "open",
+      "updated_at": "2026-10-20T16:05:52Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 7430,
+      "title": "Add opt-in tier-based routing for Claude ingress",
+      "html_url": "https://github.com/lidge-jun/opencodex/issues/7430",
+      "state": "open",
+      "updated_at": "2026-10-20T13:23:03Z",
+      "repo": "lidge-jun/opencodex",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/lidge-jun/opencodex/issues/7430#issuecomment-6290569003",
+          "author": "Ingwannu",
+          "body": "Checked against trusted dev `12025981e5a304cdb6b1b54f525ba8554f623977`. The existing tierModels launch defaults and explicit modelMap rewrite have different owners. Keep router-level tier routing opt-in and as a design item: specify precedence against exact modelMap/account-qualified models, provider/model/effort-qualified routes, unknown/future Claude names, combo selection, and preview/count_tokens. Owner approval of that contract and saved-config migration is needed before changing defaults or adding controls; no UI or routing policy is implemented by this comment."
+        },
+        {
+          "url": "https://github.com/lidge-jun/opencodex/issues/7430#issuecomment-6291868151",
+          "author": "oliver-mee",
+          "body": "Thanks. The proposed contract is now documented and covered in #7435, including exact mappings, qualified selectors and effort rows, future/unknown names, combo selection, preview and count_tokens.\n\nIt stays opt-in, with no default or UI changes and no automatic conversion of existing modelMap or tierModels settings. Invalid policy salvage preserves unrelated configuration. I also fixed combo rename/public-alias migration for the new saved references in e84a5ecec.\n\nThe PR records the full red suite result, exact-base failure comparisons and the documented resource exception for the final focused checks. I am requesting review of that contract, not treating this as owner approval or bypassing maintainer-started CI before merge.\n"
+        }
+      ]
+    },
+    {
+      "number": 10542,
+      "title": "Sync DeepSeek model availability on Alibaba Token Plan",
+      "html_url": "https://github.com/anomalyco/models.dev/issues/10542",
+      "state": "closed",
+      "updated_at": "2026-10-20T02:16:15Z",
+      "repo": "anomalyco/models.dev",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 30352,
+      "title": "[Bug]: This device browser lacks viewport presets and page-targeted DevTools",
+      "html_url": "https://github.com/stablyai/orca/issues/30352",
+      "state": "open",
+      "updated_at": "2026-10-18T17:37:53Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/issues/30352#issuecomment-6253014188",
+          "author": "AmethystLiang",
+          "body": "looking into it"
+        }
+      ]
+    },
+    {
+      "number": 30350,
+      "title": "[Bug]: Client-hosted browser profile switching cannot safely replace a live guest",
+      "html_url": "https://github.com/stablyai/orca/issues/30350",
+      "state": "closed",
+      "updated_at": "2026-10-19T00:49:01Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/issues/30350#issuecomment-6253014259",
+          "author": "AmethystLiang",
+          "body": "looking into it"
+        },
+        {
+          "url": "https://github.com/stablyai/orca/issues/30350#issuecomment-6257303785",
+          "author": "nwparker",
+          "body": "Thanks @oliver-mee for the clear report and for #30351. Its staged-replacement design is the basis of the fix in #30452, which includes your commit with you as the author.\n\n**What changed:**\n- Your desktop and the server now agree that a profile switch is supported before anything changes. A desktop too old to support it is refused without touching anything.\n- The replacement page is built in its own cookie storage, and the original page is closed only once the new one is working. If anything fails, the original page stays usable.\n- It also handles connection drops during a switch, switches that finish after a timeout, rebuilding a switched page after a crash or reconnect, folder workspaces, and downloads started during the switch.\n\nWe verified it with unit tests and with your paired Electron cookie-isolation test on macOS. The profile picker in the toolbar is still separate work. The fix ships in the next release.\n"
+        }
+      ]
+    },
+    {
+      "number": 29052,
+      "title": "[Bug]: Cookie-file import rejects client-hosted browsers in remote sessions",
+      "html_url": "https://github.com/stablyai/orca/issues/29052",
+      "state": "open",
+      "updated_at": "2026-10-15T16:51:59Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/issues/29052#issuecomment-6197480829",
+          "author": "AmethystLiang",
+          "body": "Thanks for reporting. Looking into it"
+        }
+      ]
+    },
+    {
+      "number": 2812,
+      "title": "fix(ci): skip superseded workflow runs with empty PR bindings",
+      "html_url": "https://github.com/larksuite/cli/issues/2812",
+      "state": "open",
+      "updated_at": "2026-10-14T03:21:26Z",
+      "repo": "larksuite/cli",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 5985,
+      "title": "[Bug]: Codex sessions started before a plugin upgrade fail every hook with MODULE_NOT_FOUND",
+      "html_url": "https://github.com/volcengine/OpenViking/issues/5985",
+      "state": "open",
+      "updated_at": "2026-10-14T02:39:41Z",
+      "repo": "volcengine/OpenViking",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 26153,
+      "title": "[Bug]: Cookie warning calls family-preserved rows unreadable",
+      "html_url": "https://github.com/stablyai/orca/issues/26153",
+      "state": "closed",
+      "updated_at": "2026-10-14T01:25:08Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/issues/26153#issuecomment-6041889191",
+          "author": "AmethystLiang",
+          "body": "Thanks for reporting. Looking into it"
+        }
+      ]
+    },
+    {
+      "number": 26138,
+      "title": "[Bug]: Headless browser pages intermittently return empty screenshots",
+      "html_url": "https://github.com/stablyai/orca/issues/26138",
+      "state": "open",
+      "updated_at": "2026-10-09T12:55:28Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/issues/26138#issuecomment-6041890013",
+          "author": "AmethystLiang",
+          "body": "Thanks for reporting. Looking into it"
+        },
+        {
+          "url": "https://github.com/stablyai/orca/issues/26138#issuecomment-6081315958",
+          "author": "jonathanelmgren",
+          "body": "Same failure on the packaged release, and on our machine it is not intermittent.\n\n**Setup:** Orca 1.4.219 (Electron 43.7.5), Linux x64, `orca serve` as a systemd user service with the Xvfb display (`:99`) that Orca starts itself. No desktop window.\n\n**Observed:** for a tab created with `orca tab create --url https://example.com`:\n\n- the first `orca screenshot` returns a 1x1 PNG;\n- every later screenshot is 1280x773 but holds only the page's root background colour: no text and no boxes. 6 of 6 retries after a reload were identical (4560 bytes). After `document.documentElement.style.background = 'red'`, the screenshot is solid red and the injected content is still missing. So the capture reaches the live page, but the page's layers are never drawn;\n- `orca snapshot` and `orca exec \"eval ...\"` work normally;\n- the GPU process logs `x11_software_bitmap_presenter.cc:147] XGetWindowAttributes failed for window <id>` once for each tab window created.\n\n**Reproduced outside Orca** with the same Electron binary, a fresh Xvfb, `app.disableHardwareAcceleration()` + `--disable-gpu` (as `_4i()` does in serve mode), and a `BrowserWindow({show:false, width:1280, height:800})` loading example.com. Five captures in a row per mode:\n\n| mode | results |\n|---|---|\n| hidden window, CDP `Page.captureScreenshot` with Orca's kick loop (`invalidate()` + 1x1-clip JPEG captures at 250/750/1750/3750 ms) | 1x1, good, background-only, good, background-only |\n| hidden window, CDP without kicks | timeout, good, timeout, good, timeout |\n| hidden window, `webContents.capturePage()` | partial, then good x4 |\n| `webPreferences.offscreen: true` | good x5 |\n| `win.showInactive()` on the Xvfb display | good x5 |\n\nSo the kick workaround in the capture path does not just fail to force a frame. On the first call, the main request resolves with the kick's 1x1 frame; after that, it often resolves with an empty frame that has only the background colour. Like the original report, enabling offscreen rendering for serve-mode tabs fixed it every time here. Mapping the window with `showInactive()` on the private Xvfb display also works.\n\nMinor, seen while testing: `orca screenshot --format jpeg` returns a PNG.\n"
+        }
+      ]
+    },
+    {
+      "number": 26069,
+      "title": "[Bug]: Unscoped browser keypress falls back across workspaces",
+      "html_url": "https://github.com/stablyai/orca/issues/26069",
+      "state": "closed",
+      "updated_at": "2026-10-14T00:14:34Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/issues/26069#issuecomment-6041896562",
+          "author": "AmethystLiang",
+          "body": "Thanks for reporting. Looking into it"
+        }
+      ]
+    },
+    {
+      "number": 5494,
+      "title": "[Feature]: opencode plugin: use the OpenCode v2 plugin API for parity with the Claude Code and Codex plugins",
+      "html_url": "https://github.com/volcengine/OpenViking/issues/5494",
+      "state": "open",
+      "updated_at": "2026-10-05T02:45:51Z",
+      "repo": "volcengine/OpenViking",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 14371,
+      "title": "Default favicon can become invisible: SVG favicon is cached in the wrong colour scheme, and raster favicons have no light variant",
+      "html_url": "https://github.com/paperclipai/paperclip/issues/14371",
+      "state": "open",
+      "updated_at": "2026-09-28T14:30:41Z",
+      "repo": "paperclipai/paperclip",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/paperclipai/paperclip/issues/14371#issuecomment-5872061442",
+          "author": "youhanasheriff",
+          "body": "A matching fix is already open in #14374. It gives each colour scheme a separate favicon URL and updates the icon when the browser scheme changes. Linking it here so contributors can follow the existing work."
+        }
+      ]
+    },
+    {
+      "number": 504,
+      "title": "OpenCode 2.x sessions are not indexed (session_v2 / session_message tables)",
+      "html_url": "https://github.com/Dicklesworthstone/coding_agent_session_search/issues/504",
+      "state": "closed",
+      "updated_at": "2026-10-02T02:58:51Z",
+      "repo": "Dicklesworthstone/coding_agent_session_search",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/Dicklesworthstone/coding_agent_session_search/issues/504#issuecomment-5863690257",
+          "author": "Dicklesworthstone",
+          "body": "Thanks for the precise report. Confirmed from the code: the OpenCode connector in `franken_agent_detection` (which cass uses to find and parse OpenCode sessions) reads only the 1.x `session`/`message` tables. Nothing on its current main references `session_v2` or `session_message`, so a session that exists only in the 2.x tables is never indexed, as you describe. Tracked as bead `coding_agent_session_search-9su4d`.\n\nPlan:\n- Read `session_v2`/`session_message` when they exist, alongside the 1.x tables.\n- De-duplicate migrated sessions by id and prefer the `session_v2` row.\n- Map each message `type` and its `data` from OpenCode 2.x's own source, not only the user `{text}` shape. Sub-agent sessions (`parent_id`) get the same treatment as on the 1.x path, and non-message events such as `idle` or `agent-switched` don't become empty messages.\n\nThe fix ships as a `franken_agent_detection` release plus a cass pin bump. I'll follow up here when a build with it is available.\n"
+        },
+        {
+          "url": "https://github.com/Dicklesworthstone/coding_agent_session_search/issues/504#issuecomment-5882584238",
+          "author": "Dicklesworthstone",
+          "body": "Fixed in `franken-agent-detection` 0.3.3 (released today; fix commit 7f4c2dd), which cass now pins on `main` (6d75777e).\n\nThe connector now reads `session_v2`/`session_message` alongside the 1.x tables:\n- A session migrated from 1.x is indexed once, with its 2.x title and transcript.\n- 2.x rows follow `seq`.\n- Assistant turns keep their text, reasoning and tool text results, credited to the model id.\n- `idle` and the `*-switched` events add no messages.\n- Later 2.x builds that keep 2.x sessions in `session` itself are read the same way.\n\nEnd-to-end check with your repro, using release binaries:\n- An isolated HOME held an OpenCode 2.0.16-shaped `opencode.db` with a v2-only session and a session migrated from 1.x. The 1.x tables kept one stale message that the 2.x transcript no longer has.\n- Each binary ran `cass index`, then `cass search '<phrase>' --agent opencode --robot --mode lexical`.\n\n| phrase | where it lives | cass on FAD 0.3.2 (`main` before, 03a25ad1) | cass on FAD 0.3.3 (patch-identical to 6d75777e) |\n|---|---|---|---|\n| `platypusdistinctivephrase` | v2-only session, user turn | 0 hits | 1 hit, \"Started on 2.x\" |\n| `echidnaassistantreply` | v2-only session, assistant turn | 0 hits | 1 hit, \"Started on 2.x\" |\n| `wombatmigratedphrase` | migrated session, 2.x turn | 0 hits | 1 hit, \"Migrated to 2.x\" |\n| `quokkaleftbehind` | migrated session, stale 1.x copy only | 1 hit, \"Migrated on 1.x\" | 0 hits |\n\nPer the index report, the OpenCode connector went from 1 conversation / 1 message (the stale 1.x copy) to 2 conversations / 3 messages.\n\nIt will ship in the next cass release. Until then, a build from `main` has it.\n"
+        },
+        {
+          "url": "https://github.com/Dicklesworthstone/coding_agent_session_search/issues/504#issuecomment-5944800576",
+          "author": "Dicklesworthstone",
+          "body": "Shipped in v0.10.0 (https://github.com/Dicklesworthstone/coding_agent_session_search/releases/tag/v0.10.0), which pins franken-agent-detection 0.3.3 (6d75777e): OpenCode 2.x `session_v2`/`session_message` sessions are indexed, and a session migrated from 1.x is indexed once. Closing; reopen with a sample if a 2.x session is still missing."
+        }
+      ]
+    },
+    {
+      "number": 13923,
+      "title": "`paperclipai install --ref` aborts on lockfile drift: install.ts runs a frozen pnpm install with no fallback, unlike provision-worktree.sh and release.yml",
+      "html_url": "https://github.com/paperclipai/paperclip/issues/13923",
+      "state": "open",
+      "updated_at": "2026-10-15T23:33:13Z",
+      "repo": "paperclipai/paperclip",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/paperclipai/paperclip/issues/13923#issuecomment-6204481206",
+          "author": "rubensousa-uw",
+          "body": "Another data point, this time on a **release tag**, not just `master`: `v2026.1012.0` (`bba6a45f0`) is affected too, so following the git-ref install docs onto the current stable release fails the same way.\n\nOn a clean `git archive` of the tag:\n\n    $ corepack pnpm@9.15.4 install --frozen-lockfile --lockfile-only\n    Scope: all 36 workspace projects\n     ERR_PNPM_OUTDATED_LOCKFILE  Cannot install with \"frozen-lockfile\" because pnpm-lock.yaml is not up to date with <ROOT>/server/package.json\n\nThe `server` importer in the tag's `pnpm-lock.yaml` has no entries for two specifiers that `server/package.json` declares: `\"@modelcontextprotocol/sdk\": \"^1.30.0\"` and `\"light-my-request\": \"^6.6.0\"`. Run through `paperclipai install --repo <owner>/<repo> --ref <sha>` (CLI 2026.1005.0), the install stops at `corepack pnpm install --frozen-lockfile`, 12 s in, before any build.\n\nSo the drift is not only a `master` problem between releases: it shipped in a tag, and `install --ref` is the one path that turns it into a hard stop.\n\nOn our side the workaround was a lockfile-only commit on top of the tag, generated with the repo's `packageManager` (`corepack pnpm@9.15.4 install --lockfile-only`, +28/\u22121 lines). After it, `pnpm install --frozen-lockfile` passes on a clean tree (27 s). That fixes our fork, but not anyone who installs the tag itself.\n\n+1 to the frozen-first, logged fallback proposed above. A release-time check that `pnpm install --frozen-lockfile --lockfile-only` passes on the tag would also catch this before a release ships.\n"
+        }
+      ]
+    },
+    {
+      "number": 7974,
+      "title": "Alibaba Token Plan providers point at the undocumented region-scoped hosts",
+      "html_url": "https://github.com/anomalyco/models.dev/issues/7974",
+      "state": "open",
+      "updated_at": "2026-09-24T03:45:53Z",
+      "repo": "anomalyco/models.dev",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 747,
+      "title": "session/resume and session/load drop _meta, so the #384 Claude setting-source isolation is lost on resume",
+      "html_url": "https://github.com/openclaw/acpx/issues/747",
+      "state": "closed",
+      "updated_at": "2026-09-24T20:15:09Z",
+      "repo": "openclaw/acpx",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/openclaw/acpx/issues/747#issuecomment-5821532077",
+          "author": "steipete",
+          "body": "Fixed in https://github.com/openclaw/acpx/pull/778. The request-level regressions assert that both session/load and session/resume retain Claude settings isolation, allowed tools, max turns, and the system prompt. Four restart regressions also verify the saved or explicitly overridden model while the same queue owner survives an adapter restart.\n\nThe reported failure was reproduced before the fix. The full remote check/docs gate passed (2,684 tests passed, 13 skipped; 207 coverage tests passed), CLI-flags mutation testing passed at 91.77%, and exact-head CI passed. This remains unreleased; the package version is still 0.19.2. Thanks @odrobnik for the report.\n"
+        }
+      ]
+    },
+    {
+      "number": 13861,
+      "title": "`paperclipai update` runs npm against a pnpm global install \u2014 detectInstallMode returns global-npm for any /node_modules/paperclipai/ path",
+      "html_url": "https://github.com/paperclipai/paperclip/issues/13861",
+      "state": "open",
+      "updated_at": "2026-10-05T20:44:21Z",
+      "repo": "paperclipai/paperclip",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/paperclipai/paperclip/issues/13861#issuecomment-5872385970",
+          "author": "youhanasheriff",
+          "body": "There is an open PR linked to this issue: #14126. Linking it here so contributors can follow the work."
+        },
+        {
+          "url": "https://github.com/paperclipai/paperclip/issues/13861#issuecomment-6002579369",
+          "author": "calvindomenico",
+          "body": "Independent confirmation from a self-hosted instance (observed 2026-10-04): `paperclipai update` in `global-npm` mode installed the new version to `~/.local/node/lib/node_modules`, but the background service kept running the previously-managed install \u2014 the upgrade silently didn't take effect from the running service's point of view, matching this issue's `detectInstallMode` framing. Surfacing in case the repro helps: we noticed it because post-upgrade behavior (new CLI flags) wasn't present in running agent sessions even though `paperclipai --version` on the CLI reported the new version."
+        }
+      ]
+    },
+    {
+      "number": 5277,
+      "title": "[Feature]: Path-scoped connections in ovcli.conf (tenant per directory)",
+      "html_url": "https://github.com/volcengine/OpenViking/issues/5277",
+      "state": "open",
+      "updated_at": "2026-09-22T04:02:16Z",
+      "repo": "volcengine/OpenViking",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 1579,
+      "title": "[BUG] Codex MCP can break when uvx cache is removed mid-session",
+      "html_url": "https://github.com/basicmachines-co/basic-memory/issues/1579",
+      "state": "closed",
+      "updated_at": "2026-10-09T01:35:38Z",
+      "repo": "basicmachines-co/basic-memory",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 21119,
+      "title": "[Bug]: Headless serve propagates disabled session bus into all terminals and agents",
+      "html_url": "https://github.com/stablyai/orca/issues/21119",
+      "state": "closed",
+      "updated_at": "2026-10-08T12:36:33Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/issues/21119#issuecomment-5719132646",
+          "author": "AmethystLiang",
+          "body": "thanks for reporting. looking into it"
+        }
+      ]
+    },
+    {
+      "number": 21263,
+      "title": "macOS: utun write stall (ENOSPC) persists until restart; daemon itself healthy",
+      "html_url": "https://github.com/tailscale/tailscale/issues/21263",
+      "state": "closed",
+      "updated_at": "2026-09-28T22:01:22Z",
+      "repo": "tailscale/tailscale",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/tailscale/tailscale/issues/21263#issuecomment-5879534977",
+          "author": "nickoneill",
+          "body": "Duplicate of #20859, tracking there "
+        }
+      ]
+    },
+    {
+      "number": 2654,
+      "title": "[Base] Add +table-batch-create and +table-batch-delete shortcuts",
+      "html_url": "https://github.com/larksuite/cli/issues/2654",
+      "state": "closed",
+      "updated_at": "2026-10-09T07:43:38Z",
+      "repo": "larksuite/cli",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/larksuite/cli/issues/2654#issuecomment-5596913897",
+          "author": "CloudStartaI",
+          "body": "\u611f\u8c22\u60a8\u63d0\u51fa\u7684\u5efa\u8bae\uff01\u76ee\u524d lark-cli \u6682\u4e0d\u652f\u6301\u8be5\u80fd\u529b\uff0c\u4f46\u6211\u4eec\u5df2\u7ecf\u8bb0\u5f55\u4e86\u60a8\u7684\u9700\u6c42\u3002\u540e\u7eed\u5982\u6709\u652f\u6301\uff0c\u6211\u4eec\u4f1a\u53ca\u65f6\u901a\u77e5\u60a8\u3002\n\nThank you for your suggestion! lark-cli does not support this capability at the moment, but we have recorded your request. We will notify you if support is added in the future."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "[BUG] Registry only serves one item; build-registry.ts cannot run outside the author's machine",
+      "html_url": "https://github.com/Subhan-code/Amicro--Micro-transitions-/issues/8",
+      "state": "closed",
+      "updated_at": "2026-09-28T17:34:12Z",
+      "repo": "Subhan-code/Amicro--Micro-transitions-",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/Subhan-code/Amicro--Micro-transitions-/issues/8#issuecomment-5875250920",
+          "author": "Subhan-code",
+          "body": "resolved it thank you :) "
+        }
+      ]
+    },
+    {
+      "number": 15006,
+      "title": "[Bug]: Project group creation always routes to the active runtime, so groups get created on the wrong host",
+      "html_url": "https://github.com/stablyai/orca/issues/15006",
+      "state": "open",
+      "updated_at": "2026-09-19T09:24:56Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 86153,
+      "title": "[Bug]: hermes plugins doctor fails every model-provider plugin, including all 34 bundled ones",
+      "html_url": "https://github.com/NousResearch/hermes-agent/issues/86153",
+      "state": "closed",
+      "updated_at": "2026-09-20T21:31:23Z",
+      "repo": "NousResearch/hermes-agent",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/NousResearch/hermes-agent/issues/86153#issuecomment-5752805624",
+          "author": "teknium1",
+          "body": "Fixed on main in 118984d7a02f8a8baec11255002cbbab7c202e06 (#117451): `hermes plugins doctor` loads `kind: model-provider` plugins through providers discovery (`providers._import_plugin_dir`), reports the registered profiles (`provider(s): <name>`), and restores the live registry afterwards, instead of pushing them through `_load_plugin` and failing on the missing `register(ctx)`. Verified live on a standalone provider plugin: base `ERROR: Plugin registration failed: no register() function`, head `OK`. Credit to @oliver-mee (#86160) for the earlier fix.\n"
+        }
+      ]
+    },
+    {
+      "number": 42545,
+      "title": "Client tool named `tool_search` is serialized as the OpenAI built-in tool, dropping `arguments`",
+      "html_url": "https://github.com/anomalyco/opencode/issues/42545",
+      "state": "closed",
+      "updated_at": "2026-10-11T17:57:01Z",
+      "repo": "anomalyco/opencode",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/anomalyco/opencode/issues/42545#issuecomment-6111965997",
+          "author": "thdxr",
+          "body": "Thanks for the report! OpenCode 2.0 is now out and development is focused on V2, so we're closing issues filed against OpenCode 1. Please upgrade (`opencode upgrade --major`, details: https://anoma.ly/notes/opencode-2-0), and if this is still relevant on 2.0, reopen this issue or open a new one with your 2.0 version.\n\n\u2014 from \ud835\udd7a\ud835\udd95\ud835\udd8a\ud835\udd93\ud835\udd6e\ud835\udd94\ud835\udd89\ud835\udd8a\n\n<!-- v1-issue-triage-2026-10 -->"
+        }
+      ]
+    },
+    {
+      "number": 14511,
+      "title": "[Bug]: OpenCode session history never loads on Linux, sqlite worker entry is not unpacked from app.asar",
+      "html_url": "https://github.com/stablyai/orca/issues/14511",
+      "state": "closed",
+      "updated_at": "2026-09-25T04:44:55Z",
+      "repo": "stablyai/orca",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/stablyai/orca/issues/14511#issuecomment-5479249657",
+          "author": "nwparker",
+          "body": "This is fixed on current main by PR #13853 (commit 17c57b7d20bc, merged before the reported 1.4.182 build). `config/electron-builder.config.cjs` now unpacks `out/main/session-scanner-opencode-sqlite-worker-entry.js`, and `config/scripts/electron-builder-config.test.mjs` verifies the spawn filename, Vite entry key, and asarUnpack rule. The first stable release containing the fix is 1.4.183; please retest on 1.4.183 or newer."
+        },
+        {
+          "url": "https://github.com/stablyai/orca/issues/14511#issuecomment-5826886304",
+          "author": "oliver-mee",
+          "body": "Retested on Orca 1.4.209 on Linux arm64. The worker warning no longer appears, existing OpenCode sessions are listed in session history, and a session transcript opens successfully. This confirms the fix from [PR #13853](https://github.com/stablyai/orca/pull/13853) works in the release I tested.\n"
+        }
+      ]
+    },
+    {
+      "number": 42535,
+      "title": "[FEATURE]: Allow wildcards in provider model whitelist/blacklist",
+      "html_url": "https://github.com/anomalyco/opencode/issues/42535",
+      "state": "closed",
+      "updated_at": "2026-10-15T02:09:12Z",
+      "repo": "anomalyco/opencode",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 85849,
+      "title": "Desktop model picker mis-cases model names (GLM renders as \"Glm\", DeepSeek as \"Deepseek\", Gemini variants lowercase)",
+      "html_url": "https://github.com/NousResearch/hermes-agent/issues/85849",
+      "state": "closed",
+      "updated_at": "2026-09-26T23:16:46Z",
+      "repo": "NousResearch/hermes-agent",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 9793,
+      "title": "Agent hooks do not work in cmux ssh workspaces: relay CLI has no hooks subcommand, and the Claude wrapper is local-only",
+      "html_url": "https://github.com/manaflow-ai/cmux/issues/9793",
+      "state": "closed",
+      "updated_at": "2026-09-30T21:20:46Z",
+      "repo": "manaflow-ai/cmux",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/manaflow-ai/cmux/issues/9793#issuecomment-5919945851",
+          "author": "teamleaderleo",
+          "body": "Thank you for reporting this! SSH and cmux-tui Claude hooks are now covered by #14974 and #14908, so this shipped :)"
+        }
+      ]
+    },
+    {
+      "number": 119587,
+      "title": "Model catalog publish rejects video input that the plugin SDK type accepts (regression of #97048 on the hosted-catalog path)",
+      "html_url": "https://github.com/openclaw/openclaw/issues/119587",
+      "state": "open",
+      "updated_at": "2026-10-17T19:01:25Z",
+      "repo": "openclaw/openclaw",
+      "kind": "issue",
+      "discussion": []
+    },
+    {
+      "number": 114105,
+      "title": "Token Plan catalog curation in #113681 used the Coding Plan endpoint: adds a model that 404s and keeps the oldest of each family",
+      "html_url": "https://github.com/openclaw/openclaw/issues/114105",
+      "state": "closed",
+      "updated_at": "2026-09-21T03:41:52Z",
+      "repo": "openclaw/openclaw",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/openclaw/openclaw/issues/114105#issuecomment-5168242103",
+          "author": "oliver-mee",
+          "body": "Opened #118726 for this.\n\nIt reverts the Token Plan portion of #113681 and nothing else: the fourteen published chat models come back, `qwen3-coder-next` goes, and the other providers from that PR plus `QWEN_MODEL_CATALOG` are untouched.\n\nI re-probed the gateway today before filing, and got a cleaner piece of evidence than the original report had. On one key in one session, `qwen3-coder-next` returns `404 Model not exist` while `kimi-k2.7-code`, which is genuinely outside that key's tier, returns `403 Access to model denied`. The two failure modes are distinct, so the 404 is the endpoint not routing the model rather than an entitlement gap on my subscription. The same 404 reproduces on a second key at a different tier.\n\nOne correction to my own report while I am here. I said anyone selecting `qwen-token-plan/qwen3-coder-next` from the picker gets a hard 404. That overstated it: the row carries `status: \"deprecated\"`, and `isPickerVisibleCatalogEntry` in `src/agents/model-catalog-visibility.ts` filters deprecated rows out of the picker, so it is only reachable by typing the exact ref. The nine missing models are the user-visible part; the dead row is mainly evidence of which endpoint the catalog was checked against.\n"
+        }
+      ]
+    },
+    {
+      "number": 113577,
+      "title": "Qwen Token Plan catalog is stale: qwen3.8-max-preview missing, three output ceilings too low, six models missing video input",
+      "html_url": "https://github.com/openclaw/openclaw/issues/113577",
+      "state": "open",
+      "updated_at": "2026-10-17T08:34:13Z",
+      "repo": "openclaw/openclaw",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/openclaw/openclaw/issues/113577#issuecomment-5827084019",
+          "author": "oliver-mee",
+          "body": "Still current. The fix is in #118726, which I have just rebased onto today's `main`, so this should stay open until that one lands or is declined.\n"
+        }
+      ]
+    },
+    {
+      "number": 2421,
+      "title": "AI contributor guidance: disclose the model used on PRs + guardrail for AI-filed issues",
+      "html_url": "https://github.com/odysseus-dev/odysseus/issues/2421",
+      "state": "open",
+      "updated_at": "2026-10-02T01:39:05Z",
+      "repo": "odysseus-dev/odysseus",
+      "kind": "issue",
+      "discussion": [
+        {
+          "url": "https://github.com/odysseus-dev/odysseus/issues/2421#issuecomment-4620850187",
+          "author": "PovilasKirna",
+          "body": "@vcscsvcscs and @glenn2223 worth a look?\n"
+        },
+        {
+          "url": "https://github.com/odysseus-dev/odysseus/issues/2421#issuecomment-4621187210",
+          "author": "glenn2223",
+          "body": "Seems like a good shout\n\nLow-tier/weak models are obviously more troublesome, and a reviewer having this information would be handy. However, the person reviewing the PR's shouldn't treat it as a reason to be less strict with their checks - not that any of you would \ud83d\ude01\n\nI can see the pros and cons of having a blank section caught in the pr check workflow. I was struggling to decide, but (like I said earlier) the information is a nice-to-have and shouldn't sway/motivate the reviewer anyway"
+        }
+      ]
+    },
+    {
+      "number": 2396,
+      "title": "Bug-report template: confirm it's an Odysseus bug (not a backend error) + capture the commit SHA",
+      "html_url": "https://github.com/odysseus-dev/odysseus/issues/2396",
+      "state": "open",
+      "updated_at": "2026-10-02T01:39:11Z",
+      "repo": "odysseus-dev/odysseus",
+      "kind": "issue",
+      "discussion": []
+    }
+  ],
+  "note": "Candidates, not verified claims. Review replacement PRs and commit co-authorship before editing profile or advancing state."
+}
