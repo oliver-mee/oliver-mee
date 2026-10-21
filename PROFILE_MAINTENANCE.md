@@ -41,7 +41,7 @@ Open PRs can appear while active, but their wording must not imply that the chan
 - Keep exactly one bullet per repository and aggregate related work into that bullet.
 - Describe concrete changes, bugs, integrations or technical areas. Avoid generic résumé language such as "contributed to" or "worked on".
 - Prefer compact noun phrases separated by commas or semicolons.
-- Do not put PR or issue numbers in the README unless the number itself is useful context.
+- Link descriptive contribution phrases to the relevant PR, adopted replacement or issue-led fix. Keep repository-name links pointing at the project. Avoid bare PR numbers and replacement-process commentary; describe landed work directly, and label genuinely open proposals.
 - Do not explain the tracking methodology in the README.
 - Preserve existing contributions unless new evidence changes them.
 - Add a new repository only when the activity meets the meaningful-contribution standard above.
