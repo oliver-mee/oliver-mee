@@ -52,6 +52,7 @@ The Projects section is broader than "currently building".
 
 - User-owned public non-fork repositories can be included even when they are older or inactive.
 - `stars` does not belong in Projects; it is linked near the top of the profile.
+- Keep Hermes Alibaba Token Plan and Alibaba Token Plan Wiki adjacent at the top of Projects, followed by iconify-cli. Do not re-add shortcuttr or a Token Plan vendor/referral link in Models / inference during routine maintenance.
 - A fork can appear only when Oliver has made substantial original changes to it, and the wording must make the derivative relationship clear rather than presenting the upstream project as his own.
 - Do not pad the section with untouched or near-identical forks.
 

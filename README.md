@@ -22,7 +22,7 @@ Most of what I build is private or still in progress, so only some of it ends up
 
 | Layer | What I use |
 | --- | --- |
-| Models / inference | Codex · Claude · Kimi · MiniMax · [Alibaba Cloud Token Plan](https://www.alibabacloud.com/help/en/model-studio/token-plan-overview) |
+| Models / inference | Codex · Claude · Kimi · MiniMax |
 | Agent runtime | [Hermes](https://github.com/NousResearch/hermes-agent) |
 | Coding agents | [OpenCode](https://github.com/anomalyco/opencode) · [Claude Code](https://github.com/anthropics/claude-code) · [Codex](https://github.com/openai/codex) |
 | Agent workspace | [Orca](https://github.com/stablyai/orca) |
@@ -35,9 +35,8 @@ Most of what I build is private or still in progress, so only some of it ends up
 ### Projects
 
 - **[Hermes Alibaba Token Plan](https://github.com/oliver-mee/hermes-alibaba-token-plan)** — Hermes provider plugin for Alibaba Cloud Token Plan across Global/China and Personal/Team tiers, with native image, speech, transcription and video tools.
-- **[iconify-cli](https://github.com/oliver-mee/iconify-cli)** — local-first Go CLI, SQLite index, agent skill and MCP server for searching, auditing and migrating roughly 294k Iconify icons.
 - **[Alibaba Token Plan Wiki](https://github.com/oliver-mee/alibaba-token-plan-wiki)** — live-verified reference for Token Plan models, pricing, limits and gateway behaviour.
-- **[shortcuttr](https://github.com/oliver-mee/shortcuttr)** — tiny web redirector for launching named Apple Shortcuts from URL query parameters.
+- **[iconify-cli](https://github.com/oliver-mee/iconify-cli)** — local-first Go CLI, SQLite index, agent skill and MCP server for searching, auditing and migrating roughly 294k Iconify icons.
 
 ### Open-source contributions
 
