@@ -1,0 +1,955 @@
+{
+  "schema_version": 1,
+  "style": "Plain descriptions with compact, code-styled PR/issue/commit references. Each URL supports only its adjacent description.",
+  "sections": [
+    {
+      "title": "Open-source contributions",
+      "items": [
+        {
+          "name": "models.dev",
+          "repo": "anomalyco/models.dev",
+          "parts": [
+            {
+              "text": "China Token Plan provider",
+              "url": "https://github.com/anomalyco/models.dev/pull/2145"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "Qwen 3.7 Plus",
+              "url": "https://github.com/anomalyco/models.dev/pull/2146"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "GLM 5.2 and Kimi K2.7 Code",
+              "url": "https://github.com/anomalyco/models.dev/pull/2684"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "gateway limits and capabilities",
+              "url": "https://github.com/anomalyco/models.dev/pull/3695"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "multimodal metadata",
+              "url": "https://github.com/anomalyco/models.dev/pull/3705"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "DeepSeek availability",
+              "url": "https://github.com/anomalyco/models.dev/pull/7147"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "provider overrides",
+              "url": "https://github.com/anomalyco/models.dev/pull/7203"
+            },
+            {
+              "text": "; issue-led fixes for "
+            },
+            {
+              "text": "retired Qwen rows",
+              "url": "https://github.com/anomalyco/models.dev/pull/6663"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "DeepSeek catalogue changes",
+              "url": "https://github.com/anomalyco/models.dev/pull/10544"
+            },
+            {
+              "text": "; open "
+            },
+            {
+              "text": "endpoint migration",
+              "url": "https://github.com/anomalyco/models.dev/pull/7977"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "OpenClaw",
+          "repo": "openclaw/openclaw",
+          "parts": [
+            {
+              "text": "Token Plan Team Edition provider and reasoning integration",
+              "url": "https://github.com/openclaw/openclaw/pull/94419"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "Qwen 3.8 model support",
+              "url": "https://github.com/openclaw/openclaw/pull/131294"
+            },
+            {
+              "text": ", and technical reports on "
+            },
+            {
+              "text": "catalogue limits and video input",
+              "url": "https://github.com/openclaw/openclaw/issues/113577"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "hosted-catalogue video validation",
+              "url": "https://github.com/openclaw/openclaw/issues/119587"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Hermes Agent",
+          "repo": "NousResearch/hermes-agent",
+          "parts": [
+            {
+              "text": "plugin-doctor validation",
+              "url": "https://github.com/NousResearch/hermes-agent/pull/117451"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "model-name casing",
+              "url": "https://github.com/NousResearch/hermes-agent/pull/121996"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "remote SSH session resume",
+              "url": "https://github.com/NousResearch/hermes-agent/pull/99672"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "dynamic provider prefixes",
+              "url": "https://github.com/NousResearch/hermes-agent/commit/19e51d2ccabf6c7f5d2f230777e9a9faedf84aa9"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "system-browser sign-in design",
+              "url": "https://github.com/NousResearch/hermes-agent/pull/46554"
+            },
+            {
+              "text": ", and issue-led fixes for "
+            },
+            {
+              "text": "setup-app versioning",
+              "url": "https://github.com/NousResearch/hermes-agent/pull/107186"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "broken plugin discovery",
+              "url": "https://github.com/NousResearch/hermes-agent/issues/86154"
+            },
+            {
+              "text": "; open PRs for "
+            },
+            {
+              "text": "plugin-defined picker groups",
+              "url": "https://github.com/NousResearch/hermes-agent/pull/86138"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "Team picker grouping",
+              "url": "https://github.com/NousResearch/hermes-agent/pull/101222"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "provider-driven model identity",
+              "url": "https://github.com/NousResearch/hermes-agent/pull/66135"
+            },
+            {
+              "text": " and the "
+            },
+            {
+              "text": "v2 media catalogue",
+              "url": "https://github.com/NousResearch/hermes-agent/pull/142141"
+            },
+            {
+              "text": "; production evidence for "
+            },
+            {
+              "text": "native OAuth refresh races",
+              "url": "https://github.com/NousResearch/hermes-agent/issues/55712"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Basic Memory",
+          "repo": "basicmachines-co/basic-memory",
+          "parts": [
+            {
+              "text": "CLI project reconciliation",
+              "url": "https://github.com/basicmachines-co/basic-memory/pull/1354"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "custom OpenAI-compatible embedding endpoint support",
+              "url": "https://github.com/basicmachines-co/basic-memory/pull/1370"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "cmux",
+          "repo": "manaflow-ai/cmux",
+          "parts": [
+            {
+              "text": "issue-led fixes for "
+            },
+            {
+              "text": "relay-drop SIGHUP",
+              "url": "https://github.com/manaflow-ai/cmux/issues/8315"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "live PTY preservation",
+              "url": "https://github.com/manaflow-ai/cmux/pull/9760"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "SSH agent hooks",
+              "url": "https://github.com/manaflow-ai/cmux/issues/9793"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Orca",
+          "repo": "stablyai/orca",
+          "parts": [
+            {
+              "text": "shell prompt composition",
+              "url": "https://github.com/stablyai/orca/pull/14619"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "keypress safety",
+              "url": "https://github.com/stablyai/orca/pull/28221"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "cookie-import diagnostics",
+              "url": "https://github.com/stablyai/orca/pull/28269"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "staged profile switching",
+              "url": "https://github.com/stablyai/orca/pull/30452"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "updater guidance",
+              "url": "https://github.com/stablyai/orca/pull/27464"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "Linux session-bus diagnosis",
+              "url": "https://github.com/stablyai/orca/issues/21119"
+            },
+            {
+              "text": "; open PRs for "
+            },
+            {
+              "text": "profile selection",
+              "url": "https://github.com/stablyai/orca/pull/31116"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "browser controls",
+              "url": "https://github.com/stablyai/orca/pull/30353"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "cookie imports",
+              "url": "https://github.com/stablyai/orca/pull/29054"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "headless rendering",
+              "url": "https://github.com/stablyai/orca/pull/26139"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "webhooks",
+              "url": "https://github.com/stablyai/orca/pull/31121"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "manual-update reporting",
+              "url": "https://github.com/stablyai/orca/pull/31124"
+            },
+            {
+              "text": "; independent testing of "
+            },
+            {
+              "text": "element annotations",
+              "url": "https://github.com/stablyai/orca/pull/22813"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "OpenCode 2 status hooks",
+              "url": "https://github.com/stablyai/orca/pull/21322"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Hindsight",
+          "repo": "vectorize-io/hindsight",
+          "parts": [
+            {
+              "text": "stable OpenCode 2 packages",
+              "url": "https://github.com/vectorize-io/hindsight/pull/4351"
+            },
+            {
+              "text": ", plus issue-led fixes for "
+            },
+            {
+              "text": "Docker diagnostics ownership",
+              "url": "https://github.com/vectorize-io/hindsight/pull/4430"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "native companion-skill installation",
+              "url": "https://github.com/vectorize-io/hindsight/pull/4439"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "OpenCodex",
+          "repo": "lidge-jun/opencodex",
+          "parts": [
+            {
+              "text": "native pnpm self-updates",
+              "url": "https://github.com/lidge-jun/opencodex/pull/4235"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "gateway-verified Token Plan catalogues",
+              "url": "https://github.com/lidge-jun/opencodex/pull/4888"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "GLM 5.3 restoration",
+              "url": "https://github.com/lidge-jun/opencodex/pull/5010"
+            },
+            {
+              "text": "; open PRs for "
+            },
+            {
+              "text": "dated models and endpoints",
+              "url": "https://github.com/lidge-jun/opencodex/pull/7439"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "tier routing",
+              "url": "https://github.com/lidge-jun/opencodex/pull/7435"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "test deadlines",
+              "url": "https://github.com/lidge-jun/opencodex/pull/7449"
+            },
+            {
+              "text": "; independent "
+            },
+            {
+              "text": "runtime-fixture validation",
+              "url": "https://github.com/lidge-jun/opencodex/pull/7447"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Lark CLI",
+          "repo": "larksuite/cli",
+          "parts": [
+            {
+              "text": "open PRs for "
+            },
+            {
+              "text": "Base field-group creation",
+              "url": "https://github.com/larksuite/cli/pull/2656"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "superseded CI-run handling",
+              "url": "https://github.com/larksuite/cli/pull/2814"
+            },
+            {
+              "text": ", with validation and regression tests."
+            }
+          ]
+        },
+        {
+          "name": "Honcho",
+          "repo": "plastic-labs/honcho",
+          "parts": [
+            {
+              "text": "embedding batch-size diagnosis",
+              "url": "https://github.com/plastic-labs/honcho/pull/983"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "Qwen JSON-mode analysis",
+              "url": "https://github.com/plastic-labs/honcho/issues/663"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Get Shit Done",
+          "repo": "gsd-build/get-shit-done",
+          "parts": [
+            {
+              "text": "custom-file backup false positives",
+              "url": "https://github.com/gsd-build/get-shit-done/pull/2511"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "future-phase health warnings",
+              "url": "https://github.com/gsd-build/get-shit-done/pull/2027"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "parallel worktree planning-file conflicts",
+              "url": "https://github.com/gsd-build/get-shit-done/pull/1599"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "MCP-tool fallback diagnosis",
+              "url": "https://github.com/gsd-build/get-shit-done/pull/2074"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "notcrawl",
+          "repo": "openclaw/notcrawl",
+          "parts": [
+            {
+              "text": "unsupported Notion block-child recovery",
+              "url": "https://github.com/openclaw/notcrawl/pull/60"
+            },
+            {
+              "text": ", preserving valid content during partial sync."
+            }
+          ]
+        },
+        {
+          "name": "HarnessKit",
+          "repo": "RealZST/HarnessKit",
+          "parts": [
+            {
+              "text": "Linux ARM64 builds and installation",
+              "url": "https://github.com/RealZST/HarnessKit/pull/93"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Notion MCP Server",
+          "repo": "awkoy/notion-mcp-server",
+          "parts": [
+            {
+              "text": "Notion template creation and discovery",
+              "url": "https://github.com/awkoy/notion-mcp-server/pull/24"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "ccgram",
+          "repo": "alexei-led/ccgram",
+          "parts": [
+            {
+              "text": "false-dead-session diagnosis",
+              "url": "https://github.com/alexei-led/ccgram/pull/131#issuecomment-5202100025"
+            },
+            {
+              "text": ", fixed upstream."
+            }
+          ]
+        },
+        {
+          "name": "claude-remember",
+          "repo": "Digital-Process-Tools/claude-remember",
+          "parts": [
+            {
+              "text": "malformed-summary validation diagnosis",
+              "url": "https://github.com/Digital-Process-Tools/claude-remember/pull/160"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "AgentMemory",
+          "repo": "rohitg00/agentmemory",
+          "parts": [
+            {
+              "text": "pinned-engine version, PATH and ARM64 install diagnosis",
+              "url": "https://github.com/rohitg00/agentmemory/pull/774"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "NanoClaw",
+          "repo": "nanocoai/nanoclaw",
+          "parts": [
+            {
+              "text": "missing sqlite3 CLI dependency diagnosis",
+              "url": "https://github.com/nanocoai/nanoclaw/pull/2309"
+            },
+            {
+              "text": ", followed by the in-tree wrapper fix."
+            }
+          ]
+        },
+        {
+          "name": "Fancy",
+          "repo": "danielpetho/fancy",
+          "parts": [
+            {
+              "text": "open PR for "
+            },
+            {
+              "text": "searchable shadcn registry descriptions",
+              "url": "https://github.com/danielpetho/fancy/pull/71"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Amicro",
+          "repo": "Subhan-code/Amicro--Micro-transitions-",
+          "parts": [
+            {
+              "text": "registry-build diagnosis",
+              "url": "https://github.com/Subhan-code/Amicro--Micro-transitions-/issues/8"
+            },
+            {
+              "text": "; maintainer confirmed the serving issue was resolved."
+            }
+          ]
+        },
+        {
+          "name": "OpenViking",
+          "repo": "volcengine/OpenViking",
+          "parts": [
+            {
+              "text": "open PRs for "
+            },
+            {
+              "text": "OpenCode recall latency",
+              "url": "https://github.com/volcengine/OpenViking/pull/5496"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "session-cleanup commit watermarks",
+              "url": "https://github.com/volcengine/OpenViking/pull/5497"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "Codex hooks surviving plugin upgrades",
+              "url": "https://github.com/volcengine/OpenViking/pull/5986"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Paperclip",
+          "repo": "paperclipai/paperclip",
+          "parts": [
+            {
+              "text": "issue templates adopted upstream",
+              "url": "https://github.com/paperclipai/paperclip/pull/4189"
+            },
+            {
+              "text": "; open PRs for "
+            },
+            {
+              "text": "git-ref installation",
+              "url": "https://github.com/paperclipai/paperclip/pull/13928"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "non-Git workspaces",
+              "url": "https://github.com/paperclipai/paperclip/pull/13929"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "dashboard regression tests",
+              "url": "https://github.com/paperclipai/paperclip/pull/13925"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "colour-scheme-safe favicons",
+              "url": "https://github.com/paperclipai/paperclip/pull/14374"
+            },
+            {
+              "text": "; technical investigations of "
+            },
+            {
+              "text": "agent permission grants",
+              "url": "https://github.com/paperclipai/paperclip/issues/1323"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "run-context write restrictions",
+              "url": "https://github.com/paperclipai/paperclip/issues/12637"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "OpenLogi",
+          "repo": "AprilNEA/OpenLogi",
+          "parts": [
+            {
+              "text": "open PRs for "
+            },
+            {
+              "text": "thumb-wheel zoom",
+              "url": "https://github.com/AprilNEA/OpenLogi/pull/1743"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "action-paced chained gestures",
+              "url": "https://github.com/AprilNEA/OpenLogi/pull/1761"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "continuous volume gestures",
+              "url": "https://github.com/AprilNEA/OpenLogi/pull/1909"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "XiaomiGateway3",
+          "repo": "AlexxIT/XiaomiGateway3",
+          "parts": [
+            {
+              "text": "Hub 2 gateway-key recovery",
+              "url": "https://github.com/AlexxIT/XiaomiGateway3/pull/1781"
+            },
+            {
+              "text": ", incorporated into the released integration."
+            }
+          ]
+        },
+        {
+          "name": "coding_agent_session_search",
+          "repo": "Dicklesworthstone/coding_agent_session_search",
+          "parts": [
+            {
+              "text": "OpenCode 2 session-indexing diagnosis",
+              "url": "https://github.com/Dicklesworthstone/coding_agent_session_search/issues/504"
+            },
+            {
+              "text": ", shipped in v0.10.0."
+            }
+          ]
+        },
+        {
+          "name": "GBrain",
+          "repo": "garrytan/gbrain",
+          "parts": [
+            {
+              "text": "native-provider configuration diagnosis",
+              "url": "https://github.com/garrytan/gbrain/issues/3350"
+            },
+            {
+              "text": ", addressed in the upstream gateway fix."
+            }
+          ]
+        },
+        {
+          "name": "acpx",
+          "repo": "openclaw/acpx",
+          "parts": [
+            {
+              "text": "session-resume metadata diagnosis",
+              "url": "https://github.com/openclaw/acpx/issues/747"
+            },
+            {
+              "text": ", fixed upstream."
+            }
+          ]
+        },
+        {
+          "name": "FunASR",
+          "repo": "modelscope/FunASR",
+          "parts": [
+            {
+              "text": "missing CTC checkpoint investigation",
+              "url": "https://github.com/modelscope/FunASR/issues/3496"
+            },
+            {
+              "text": ", independently confirmed upstream; capability boundaries documented while the native artifact publication remains unresolved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Testing & technical review",
+      "items": [
+        {
+          "name": "Google Workspace MCP",
+          "repo": "taylorwilsdon/google_workspace_mcp",
+          "parts": [
+            {
+              "text": "production Slides-schema testing",
+              "url": "https://github.com/taylorwilsdon/google_workspace_mcp/pull/777"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "Drive-scope compatibility evidence",
+              "url": "https://github.com/taylorwilsdon/google_workspace_mcp/pull/761"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "MCP Python SDK",
+          "repo": "modelcontextprotocol/python-sdk",
+          "parts": [
+            {
+              "text": "OAuth Basic-auth reproduction and token-handler analysis",
+              "url": "https://github.com/modelcontextprotocol/python-sdk/issues/1315"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Printing Press",
+          "repo": "mvanhorn/cli-printing-press",
+          "parts": [
+            {
+              "text": "binary-response diagnosis",
+              "url": "https://github.com/mvanhorn/cli-printing-press/issues/4066"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "live-test coverage investigation",
+              "url": "https://github.com/mvanhorn/cli-printing-press/issues/4046"
+            },
+            {
+              "text": " and an "
+            },
+            {
+              "text": "npm-statistics failure report",
+              "url": "https://github.com/mvanhorn/cli-printing-press/issues/4244"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Claude Honcho",
+          "repo": "plastic-labs/claude-honcho",
+          "parts": [
+            {
+              "text": "per-directory peer-isolation review",
+              "url": "https://github.com/plastic-labs/claude-honcho/pull/64"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "OpenCode",
+          "repo": "anomalyco/opencode",
+          "parts": [
+            {
+              "text": "plugin-cache update investigation",
+              "url": "https://github.com/anomalyco/opencode/issues/54127"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "Codex",
+          "repo": "openai/codex",
+          "parts": [
+            {
+              "text": "non-interactive session naming",
+              "url": "https://github.com/openai/codex/issues/46804"
+            },
+            {
+              "text": ", "
+            },
+            {
+              "text": "plugin-upgrade hook failures",
+              "url": "https://github.com/openai/codex/issues/31383"
+            },
+            {
+              "text": " and "
+            },
+            {
+              "text": "remote app-server lifecycle evidence",
+              "url": "https://github.com/openai/codex/issues/24542"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "name": "VoiceMode",
+          "repo": "mbailey/voicemode",
+          "parts": [
+            {
+              "text": "OAuth redirect CSP diagnosis",
+              "url": "https://github.com/mbailey/voicemode/issues/329"
+            },
+            {
+              "text": "."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

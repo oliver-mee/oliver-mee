@@ -41,7 +41,8 @@ Open PRs can appear while active, but their wording must not imply that the chan
 - Keep exactly one bullet per repository and aggregate related work into that bullet.
 - Describe concrete changes, bugs, integrations or technical areas. Avoid generic résumé language such as "contributed to" or "worked on".
 - Prefer compact noun phrases separated by commas or semicolons.
-- Link each distinct contribution phrase to its own supporting PR, adopted replacement, commit or issue-led fix. Never wrap a multi-change summary in one link or use one PR to stand in for unrelated changes. Keep repository-name links pointing at the project. Avoid bare PR numbers and replacement-process commentary; describe landed work directly, and label genuinely open proposals.
+- Use plain-text contribution descriptions followed by compact, code-styled evidence links: ``China Token Plan provider [`PR #2145`](https://github.com/anomalyco/models.dev/pull/2145)``. Label issue and commit references distinctly. Keep repository-name links pointing at the project. GitHub's native shortened/rich issue references are conversation features, not README-file features; do not promise native PR pills or unfurls. Never link whole prose descriptions or use one reference for unrelated changes. Keep landed work direct and genuinely open proposals labelled.
+- `.profile/profile.json` is the reviewed contribution-display source. Edit its text/reference parts, then run `python3 scripts/audit.py --render`; do not hand-edit the generated contribution sections. The introduction, stack and Projects sections are preserved by the renderer.
 - Do not explain the tracking methodology in the README.
 - Preserve existing contributions unless new evidence changes them.
 - Add a new repository only when the activity meets the meaningful-contribution standard above.
@@ -75,8 +76,9 @@ python3 scripts/audit.py --full --output .profile/full-history.json
 python3 scripts/audit.py --timelines --output .profile/full-history.json
 python3 scripts/audit.py --full --participated --output .profile/participation-history.json
 python3 scripts/audit.py --full --commits --output .profile/commit-history.json
-# Review evidence and update the curated .profile/coverage.json; do not infer adoption from state alone.
+# Review evidence and update .profile/coverage.json and .profile/profile.json.
 python3 scripts/audit.py --render
+python3 scripts/audit.py --check
 ```
 
 The collector paginates public-source `gh` searches, checks real merge status and reads discussion/timeline evidence. Commit search results must be deduplicated by SHA: copies in downstream forks are not separate contributions. Verify original authorship and default-branch ancestry in the canonical upstream when search returns a fork instead. Search cannot prove the absence of unindexed, review-only or deleted activity; retain known evidence beyond the search results.

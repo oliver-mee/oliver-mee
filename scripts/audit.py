@@ -29,6 +29,66 @@ def search(query, resource='issues'):
         page += 1
 
 
+def secret_patterns_present(text):
+    """Credential-shape guard; deliberately returns no matching credential values."""
+    import re
+    patterns = [r'gh[opusr]_[A-Za-z0-9]{20,}', r'github_pat_[A-Za-z0-9_]{30,}',
+                r'sk-ant-[A-Za-z0-9_-]{20,}', r'xox[baprs]-[A-Za-z0-9-]{20,}',
+                r'AKIA[A-Z0-9]{16}', r'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----']
+    return any(re.search(pattern, text) for pattern in patterns)
+
+
+def check_public():
+    """Scan tracked and outgoing non-ignored files, never read local credential stores."""
+    names = subprocess.check_output(['git', '-C', str(ROOT), 'ls-files', '--cached', '--others', '--exclude-standard', '-z']).decode().split('\0')
+    flagged = []
+    scanned = 0
+    for name in dict.fromkeys(names):
+        if not name:
+            continue
+        path = ROOT / name
+        if not path.is_file() or path.is_symlink():
+            continue
+        text = path.read_text(errors='replace')
+        scanned += 1
+        if secret_patterns_present(text):
+            flagged.append(name)
+    if flagged:
+        raise RuntimeError('Credential-shaped content found; inspect locally before publication: ' + ', '.join(flagged))
+    print(f'Public-file credential-pattern scan clean: {scanned} files. This is a heuristic check, not proof that arbitrary secrets cannot exist.')
+
+
+def render_profile():
+    """Render plain-language descriptions with short references, never blue paragraph links."""
+    import re
+    source = json.loads((ROOT / '.profile/profile.json').read_text())
+    readme = ROOT / 'README.md'
+    current = readme.read_text()
+    if current.count('### Open-source contributions\n') != 1:
+        raise ValueError('README contribution marker must occur exactly once')
+    prefix = current.split('### Open-source contributions\n', 1)[0]
+    rows = []
+    for section in source['sections']:
+        rows.extend([f"### {section['title']}", ''])
+        for item in section['items']:
+            description = []
+            for part in item['parts']:
+                description.append(part['text'])
+                if 'url' in part:
+                    match = re.fullmatch(r'https://github.com/[^/]+/[^/]+/(pull|issues|commit)/([A-Za-z0-9]+)(?:#[^\s]+)?', part['url'])
+                    if not match:
+                        raise ValueError(f"Invalid evidence target: {part['url']}")
+                    kind, identifier = match.groups()
+                    label = {'pull': 'PR #', 'issues': 'Issue #', 'commit': 'Commit '}[kind]
+                    label += identifier[:7] if kind == 'commit' else identifier
+                    description.append(f" [`{label}`]({part['url']})")
+            rows.append(f"- **[{item['name']}](https://github.com/{item['repo']})** — {''.join(description)}")
+        rows.append('')
+    rows.extend(['[Full public contribution record](CONTRIBUTIONS.md)', ''])
+    readme.write_text(prefix + '\n'.join(rows))
+    print('Rendered plain descriptions and compact evidence references into README.md')
+
+
 def render_coverage():
     """Render the reviewed ledger, keeping technical credit separate from routine discussion."""
     report = json.loads((ROOT / '.profile/coverage.json').read_text())
@@ -69,9 +129,14 @@ def main():
     parser.add_argument('--participated', action='store_true', help='Collect other authors’ public items commented on by Oliver')
     parser.add_argument('--output', default='.profile/activity.json')
     parser.add_argument('--timelines', action='store_true', help='Enrich an existing --output report with paginated issue/PR timelines')
-    parser.add_argument('--render', action='store_true', help='Render reviewed .profile/coverage.json into CONTRIBUTIONS.md without network access')
+    parser.add_argument('--render', action='store_true', help='Render reviewed coverage/profile JSON into CONTRIBUTIONS.md and README.md without network access')
+    parser.add_argument('--check', action='store_true', help='Scan tracked/non-ignored publication files for credential-shaped content')
     args = parser.parse_args()
+    if args.check:
+        check_public()
+        return
     if args.render:
+        render_profile()
         render_coverage()
         return
     if args.timelines:

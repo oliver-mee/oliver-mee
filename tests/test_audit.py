@@ -92,6 +92,48 @@ class CoverageTests(unittest.TestCase):
         self.assertIn('no verified landed outcome', r['disposition'])
         self.assertNotIn('basic-memory/pull/1580', self.readme)
 
+    def test_plain_descriptions_have_compact_typed_references(self):
+        section = self.readme.split('### Open-source contributions', 1)[1]
+        for label, url in re.findall(r'\[([^\]]+)\]\(([^)]+)\)', section):
+            if '/pull/' in url or '/issues/' in url or '/commit/' in url:
+                self.assertRegex(label, r'^`(?:PR #\d+|Issue #\d+|Commit [a-f0-9]{7})`$')
+                if '/pull/' in url:
+                    self.assertEqual(label, f"`PR #{url.split('/pull/')[1].split('#')[0]}`")
+        models = next(line for line in section.splitlines() if line.startswith('- **[models.dev]'))
+        self.assertEqual(len(re.findall(r'\[`PR #\d+`\]', models)), 10)
+        self.assertNotIn('[China Token Plan provider]', models)
+
+    def test_profile_renderer_preserves_intro_and_evidence_and_is_idempotent(self):
+        path = self.root / 'README.md'
+        original = path.read_text()
+        prefix = original.split('### Open-source contributions', 1)[0]
+        urls = re.findall(r'https://github.com/[^)\s]+', original)
+        audit.render_profile()
+        rendered = path.read_text()
+        self.assertTrue(rendered.startswith(prefix))
+        self.assertEqual(urls, re.findall(r'https://github.com/[^)\s]+', rendered))
+        audit.render_profile()
+        self.assertEqual(rendered, path.read_text())
+
+    def test_invalid_evidence_cannot_partially_overwrite_readme(self):
+        import tempfile
+        import os
+        with tempfile.TemporaryDirectory(dir=os.environ.get('TMPDIR')) as scratch:
+            root = Path(scratch)
+            (root / '.profile').mkdir()
+            original = 'Intro\n\n### Open-source contributions\n\nOld content\n'
+            (root / 'README.md').write_text(original)
+            (root / '.profile/profile.json').write_text(json.dumps({'sections': [{'title': 'Open-source contributions', 'items': [{'name': 'Example', 'repo': 'example/repo', 'parts': [{'text': 'Bad target', 'url': 'https://example.invalid/'}]}]}]}))
+            with patch.object(audit, 'ROOT', root):
+                with self.assertRaises(ValueError):
+                    audit.render_profile()
+            self.assertEqual((root / 'README.md').read_text(), original)
+
+    def test_secret_guard_detects_credential_shapes_without_printing_values(self):
+        self.assertTrue(audit.secret_patterns_present('ghp_' + 'x' * 36))
+        self.assertTrue(audit.secret_patterns_present('-----BEGIN ' + 'PRIVATE KEY-----'))
+        self.assertFalse(audit.secret_patterns_present('GH_TOKEN is an environment variable; PR #2145 is a reference'))
+
     def test_commit_search_uses_commit_resource(self):
         with patch.object(audit, 'gh', return_value={'items': [], 'total_count': 0}) as api:
             audit.search('author:oliver-mee', 'commits')
